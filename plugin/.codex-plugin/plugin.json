@@ -1,0 +1,43 @@
+{
+  "name": "open-paper-reviewer",
+  "version": "0.1.0",
+  "description": "Review a scientific paper claim by claim: every claim quoted, checked four ways and given a verdict from a fixed rubric, with the review's own citations verified and the model, effort and prompt recorded.",
+  "author": {
+    "name": "OpenPaperReviewer contributors",
+    "url": "https://github.com/sinkomr/OpenPaperReviewer"
+  },
+  "homepage": "https://github.com/sinkomr/OpenPaperReviewer",
+  "repository": "https://github.com/sinkomr/OpenPaperReviewer",
+  "license": "MIT",
+  "keywords": [
+    "peer-review",
+    "scientific-papers",
+    "research",
+    "fact-checking",
+    "citations",
+    "reproducibility"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OpenPaperReviewer",
+    "shortDescription": "Claim-by-claim paper review",
+    "longDescription": "Review a scientific paper claim by claim. Every claim is quoted verbatim, checked against the paper's own evidence, the literature, alternative explanations and standard practice, and given a verdict from a fixed rubric. The review's own citations are verified before it is finalized, and the model, reasoning effort and prompt are recorded so results can be compared and reproduced.",
+    "developerName": "OpenPaperReviewer contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/sinkomr/OpenPaperReviewer",
+    "defaultPrompt": [
+      "Review this paper claim by claim",
+      "Check whether this preprint's citations support its claims",
+      "Do a standard review of this manuscript"
+    ],
+    "brandColor": "#2F5D8A",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

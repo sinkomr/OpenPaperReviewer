@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Generated prompts and docs are up to date
+        run: python3 scripts/build_prompts.py --check
+
+      - name: The fixture review is valid
+        run: python3 plugin/skills/open-paper-reviewer/scripts/validate_review.py tests/fixtures/good-review

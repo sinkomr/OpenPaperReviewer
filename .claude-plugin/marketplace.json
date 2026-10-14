@@ -1,0 +1,16 @@
+{
+  "name": "openpaperreviewer",
+  "owner": {
+    "name": "OpenPaperReviewer contributors",
+    "url": "https://github.com/sinkomr/OpenPaperReviewer"
+  },
+  "description": "OpenPaperReviewer: an open, claim-by-claim method for reviewing scientific papers",
+  "plugins": [
+    {
+      "name": "open-paper-reviewer",
+      "source": "./plugin",
+      "description": "Review a scientific paper claim by claim, with verified citations and a recorded model, effort and prompt",
+      "category": "research"
+    }
+  ]
+}

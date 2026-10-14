@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.venv/
+
+# Local review runs and the papers they read are never committed on main.
+/runs/
+*.pdf
+
+# Eval output from `claude plugin eval`
+plugin/evals/results/
+
+# Release files built by scripts/make_release_zip.py
+/dist/

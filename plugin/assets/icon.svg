@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="OpenPaperReviewer">
+  <rect width="64" height="64" rx="14" fill="#2F5D8A"/>
+  <path d="M20 11h17l9 9v31a2 2 0 0 1-2 2H20a2 2 0 0 1-2-2V13a2 2 0 0 1 2-2z" fill="#FFFFFF"/>
+  <path d="M37 11v7a2 2 0 0 0 2 2h7z" fill="#C9D8E6"/>
+  <g fill="none" stroke="#2F5D8A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 27.5l2.2 2.2 3.8-3.8"/>
+    <path d="M23 36.5l2.2 2.2 3.8-3.8"/>
+    <path d="M23.6 43.6l4 4m0-4l-4 4"/>
+    <path d="M33.5 28h8M33.5 37h8M33.5 45.6h8"/>
+  </g>
+</svg>

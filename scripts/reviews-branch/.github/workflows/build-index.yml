@@ -1,0 +1,43 @@
+name: Build review index
+
+# Rebuilds README.md on the reviews branch after a review is merged.
+
+on:
+  push:
+    branches: [reviews]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-review-index
+  cancel-in-progress: false
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the reviews branch
+        uses: actions/checkout@v4
+        with:
+          path: reviews
+
+      - name: Check out the index builder from main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - name: Rebuild the index
+        run: python3 main/scripts/build_index.py reviews
+
+      - name: Commit the index if it changed
+        working-directory: reviews
+        run: |
+          if [ -n "$(git status --porcelain -- README.md)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "Rebuild review index"
+            git push
+          fi

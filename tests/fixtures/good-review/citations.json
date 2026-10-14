@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.1",
+  "citations": [
+    {
+      "id": "C-001",
+      "reference": "R. Fictional and S. Placeholder, Mechanisms of mulch effects on vegetable yield: a review, Journal of Invented Horticulture 12, 100-120 (2019)",
+      "identifier": null,
+      "url": "https://example.org/fictional-source-1",
+      "used_for": ["B-02"],
+      "access": "abstract",
+      "status": "confirmed",
+      "error": null,
+      "quote": "Mulch can raise yield through moisture retention, weed suppression and soil warming.",
+      "note": "Invented source for the test fixture."
+    },
+    {
+      "id": "C-002",
+      "reference": "T. Imaginary, Deep straw mulch and tomato yield, Invented Crop Science 8, 45-52 (2015)",
+      "identifier": null,
+      "url": "https://example.org/fictional-source-2",
+      "used_for": ["B-03"],
+      "access": "full_text",
+      "status": "confirmed",
+      "error": null,
+      "quote": "Yield rose by 35% under 15 cm of straw mulch relative to bare soil.",
+      "note": "Invented source for the test fixture."
+    },
+    {
+      "id": "C-003",
+      "reference": "U. Madeup, Handbook of Field-Trial Design, 2nd ed. (2010)",
+      "identifier": null,
+      "url": null,
+      "used_for": ["methods"],
+      "access": "metadata",
+      "status": "unverified",
+      "error": null,
+      "quote": null,
+      "note": "Could not be opened; the statement that rests on it is marked unverified in the methods file."
+    },
+    {
+      "id": "C-004",
+      "reference": "V. Notreal, Water use of field tomato, Invented Agronomy Letters 3, 9-14 (2012)",
+      "identifier": null,
+      "url": "https://example.org/fictional-source-4",
+      "used_for": ["B-02"],
+      "access": "abstract",
+      "status": "corrected",
+      "error": "misattributed",
+      "quote": "Evaporation from bare soil accounted for a third of seasonal water loss.",
+      "note": "First cited with the year 2021; the record shows 2012. Corrected in the scrutiny file."
+    },
+    {
+      "id": "C-005",
+      "reference": "W. Nobody, Mulch and nitrogen cycling (2018)",
+      "identifier": null,
+      "url": null,
+      "used_for": ["synthesis"],
+      "access": "none",
+      "status": "removed",
+      "error": "nonexistent",
+      "quote": null,
+      "note": "No such work could be found. The sentence citing it was dropped from the synthesis."
+    }
+  ]
+}

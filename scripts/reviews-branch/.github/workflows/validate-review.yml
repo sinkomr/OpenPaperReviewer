@@ -1,0 +1,41 @@
+name: Validate posted review
+
+# Runs on pull requests to the reviews branch. The files in the pull request
+# are treated as data: they are read by the validator from main and never run.
+
+on:
+  pull_request:
+    branches: [reviews]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the pull request
+        uses: actions/checkout@v4
+        with:
+          path: pr
+          fetch-depth: 0
+
+      - name: Check out the validator from main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - name: Find the review folder
+        id: folder
+        working-directory: pr
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          folder=$(python3 ../main/scripts/check_review_pr.py --base "origin/$BASE_REF")
+          echo "folder=$folder" >> "$GITHUB_OUTPUT"
+
+      - name: Validate the review
+        env:
+          FOLDER: ${{ steps.folder.outputs.folder }}
+        run: python3 main/plugin/skills/open-paper-reviewer/scripts/validate_review.py "pr/$FOLDER" --posting --check-path

@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1",
+  "method": {
+    "name": "OpenPaperReviewer",
+    "version": "0.1.0",
+    "commit": null,
+    "entry": "skill",
+    "modified": false
+  },
+  "paper": {
+    "title": "Straw mulch and tomato yield in raised beds: a one-season block trial",
+    "identifier": "none: text supplied inline in the request",
+    "version": "text supplied in the request, 2026-10-11",
+    "public": false,
+    "supplementary_provided": false
+  },
+  "review": {
+    "started": "2026-10-11",
+    "finished": "2026-10-11",
+    "mode": "standard",
+    "intake": "stated_in_request",
+    "concerns": [],
+    "status": "active",
+    "citation_verification": "none"
+  },
+  "tool": {
+    "name": "Claude Code (Claude Agent SDK)",
+    "version": "not reported by the tool"
+  },
+  "models": [
+    {
+      "name": "Claude Opus 5.5",
+      "id": "claude-opus-5-5",
+      "id_source": "reported_by_tool",
+      "effort": "default",
+      "effort_source": "supplied_by_user",
+      "phases": ["0", "1", "2", "3", "4", "5", "6", "7"]
+    }
+  ],
+  "prompt_file": "prompt.md",
+  "web_access": false,
+  "reviewer": null,
+  "human_check": "none",
+  "conflicts_of_interest": null
+}

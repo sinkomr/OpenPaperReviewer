@@ -1,0 +1,5 @@
+interface:
+  display_name: "OpenPaperReviewer"
+  short_description: "Claim-by-claim review of a scientific paper"
+  brand_color: "#2F5D8A"
+  default_prompt: "Use $open-paper-reviewer to review this paper claim by claim."

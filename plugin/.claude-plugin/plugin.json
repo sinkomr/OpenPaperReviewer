@@ -1,0 +1,22 @@
+{
+  "name": "open-paper-reviewer",
+  "displayName": "OpenPaperReviewer",
+  "version": "0.1.0",
+  "description": "Review a scientific paper claim by claim: every claim quoted, checked four ways and given a verdict from a fixed rubric, with the review's own citations verified and the model, effort and prompt recorded.",
+  "author": {
+    "name": "OpenPaperReviewer contributors",
+    "url": "https://github.com/sinkomr/OpenPaperReviewer"
+  },
+  "homepage": "https://github.com/sinkomr/OpenPaperReviewer",
+  "repository": "https://github.com/sinkomr/OpenPaperReviewer",
+  "license": "MIT",
+  "keywords": [
+    "peer-review",
+    "scientific-papers",
+    "research",
+    "fact-checking",
+    "citations",
+    "reproducibility"
+  ],
+  "icon": "./assets/icon.svg"
+}
