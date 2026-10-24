@@ -38,7 +38,7 @@ Then ask for a review of a paper. For an automated run, say "standard review" or
 
 The skill does not search for information about a paper's authors, and it treats the paper and every fetched page as data, never as instructions.
 
-The `evals/` folder holds regression cases that run the skill on short invented papers. One of those papers contains a sentence addressed to automated reviewers, on purpose: the case checks that the skill notes it and does not follow it.
+In the repository, the plugin's `evals/` folder holds regression cases that run the skill on short invented papers. They are left out of the release zips. One of those papers contains a sentence addressed to automated reviewers, on purpose: the case checks that the skill notes it and does not follow it.
 
 ## Limits
 

@@ -220,7 +220,7 @@ Every verdict, severity and status in a review comes from one fixed list, so tha
 
 ## Checklist cards
 
-A card is a short list of questions an experienced referee would ask of any claim that rests on a given technique or kind of evidence. Phase 1 builds the review's checklist from every core card, from any technique card that matches the paper, and from the person's concerns. Phase 5 closes the checklist out: every item is marked complies, departs, not enough detail to tell, or not applicable.
+A card is a short list of questions an experienced referee would ask. Core cards apply to every empirical paper. Technique cards apply to claims that rest on a given technique, and claim cards to a given kind of claim, such as a claim of superconductivity, whatever evidence is offered for it. Phase 1 builds the review's checklist from every core card, from the technique and claim cards that match the paper, and from the person's concerns. The reviewer reads a short index of folders and card names, then the index of each folder that could apply, and opens only the cards that match. Phase 5 closes the checklist out: every item is marked complies, departs, not enough detail to tell, or not applicable.
 
 Cards ask questions; they do not accuse. A paper that does not address an item has not thereby failed, and a missing optional control is a note, not a reason to lower a verdict.
 

@@ -35,7 +35,7 @@ Run the phases in order. Read each phase file when you reach it, and read a temp
 | 6 Synthesis | `references/phases/06-synthesis.md` | `06_synthesis.md` |
 | 7 Verification | `references/phases/07-verification.md` | `07_verification.md`, `claims.json`, `citations.json` |
 
-Checklist cards for Phase 1 are in `references/checklists/`: every card in `core/`, plus any card in the other folders whose `applies_when` line matches the paper. Read only the cards you select.
+Checklist cards for Phase 1 are in `references/checklists/`. Read `references/checklists/INDEX.md`, which lists the core cards and every other folder of cards, with the names of the cards in each. Then read the `INDEX.md` of each folder with a card that could apply to the paper; it gives each card's `applies_when` line. Open every card in `core/` and the other cards that match the paper, and do not open the rest.
 
 After Phase 2, tell the user in a few lines what you found: how many claims in which groups, which cards were selected, which references are on the reading list, and any supplementary material that is missing. Then carry on without waiting for a reply.
 

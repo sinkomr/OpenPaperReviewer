@@ -46,21 +46,27 @@ Open an issue with the "Author response" template. You can point out an error, s
 
 Cards live in `plugin/skills/open-paper-reviewer/references/checklists/`. The format and rules are in the [README there](plugin/skills/open-paper-reviewer/references/checklists/README.md). In short:
 
+- A card is a technique card (claims that rest on a technique) or a claim card (a kind of claim, whatever supports it). Core cards cover what applies to every paper.
 - Each item is a question a paper can answer well or badly, written in general terms. It does not describe or point at any particular paper.
 - Every benchmark source was opened by you, and the Sources table says where in the source the support is and what access you had.
-- New fields get a new folder beside `physics/`.
+- Cards go in a folder for their field and subfield, such as `physics/condensed-matter/`. New fields get a new folder beside `physics/`, and every new folder gets a `README.md` whose heading is its title.
+- The index of cards has two levels: a top-level list of folders with the names of their cards, then one index per folder with each card's `applies_when` line. Physics is the only field so far. Once other fields are added, the index may need a third level: fields, then subfields, then cards.
 
 Before opening a pull request:
 
 ```bash
-python3 -m unittest discover -s tests
+python3 scripts/check_card.py path/to/your-card.md
 ```
 
 ```bash
 python3 scripts/check_card_sources.py path/to/your-card.md
 ```
 
-The first checks the format. The second looks up each DOI and compares the record with your reference text. Neither can tell whether a source supports an item, so a reviewer will open a sample of your sources.
+```bash
+python3 scripts/build_prompts.py
+```
+
+The first checks the format. The second looks up each DOI and compares the record with your reference text. The third adds your card to its folder's index and to the top-level list the skill reads. None of them can tell whether a source supports an item, so a reviewer will open a sample of your sources.
 
 ## Changing the method
 

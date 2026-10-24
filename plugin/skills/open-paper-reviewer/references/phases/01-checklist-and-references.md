@@ -7,7 +7,7 @@ Purpose: decide in advance what this review must look at and which references it
 Build a numbered list, P-1, P-2, …, of things to check, from three sources.
 
 1. Every core card. They apply to any empirical paper.
-2. Every technique or field card whose `applies_when` line matches something in the methods summary. Say which cards you selected, and which techniques used in the paper have no card.
+2. Every technique or claim card whose `applies_when` line matches the paper: a technique in the methods summary, or a kind of claim the paper makes. The card index lists every folder of cards with the names of the cards in it, and each folder's own index gives the `applies_when` line of every card in that folder. Read the index of each folder with a card that could apply, and open only the cards you select. Say which cards you selected, and which techniques used in the paper have no card.
 3. Every user concern from intake, as the question you restated it into, tagged `user`.
 
 For a technique that matters to the paper's headline and has no card, write up to five items from that field's standard practice, tagged `ad hoc`. Each must name a benchmark source, which goes through verification in Phase 7 like any other citation. An item whose benchmark cannot be verified stays on the list, marked as unverified judgement.

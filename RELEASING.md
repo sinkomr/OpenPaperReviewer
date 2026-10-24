@@ -33,7 +33,7 @@ Steps for a maintainer. Nothing here happens automatically.
    ```
 
 3. If the rubric, the phases or the rules changed, raise the version in `plugin/.claude-plugin/plugin.json`, in `plugin/.codex-plugin/plugin.json` and in the frontmatter of `plugin/skills/open-paper-reviewer/SKILL.md`. A test fails if the three differ.
-4. Build the upload file:
+4. Build the upload files. This writes two zips to `dist/`: `open-paper-reviewer-plugin-<version>.zip` for plugin uploads, and `open-paper-reviewer-skill-<version>.zip` for skill uploads (one top-level folder with `SKILL.md` inside it, no plugin manifest):
 
    ```bash
    python3 scripts/make_release_zip.py
@@ -54,7 +54,7 @@ Steps for a maintainer. Nothing here happens automatically.
    ```
 
 4. On GitHub, protect both branches: require the CI check on `main` and the review validation check on `reviews`, and require a maintainer's approval for pull requests.
-5. Create a release tagged with the version and attach the zip from `dist/`.
+5. Create a release tagged with the version and attach both zips from `dist/`.
 6. Check that installation works from the public repository in Claude Code and in Codex, using the commands in `README.md`.
 
 ## Anthropic's directory
@@ -78,7 +78,7 @@ Reaches ChatGPT and Codex. Submitting needs an organization owner (or a member w
 - [ ] `plugin/.codex-plugin/plugin.json` has `name`, `version`, `description`, `author.name` and the `interface` block: `displayName`, `shortDescription` (30 characters or fewer), `longDescription`, `developerName`, `category`, `capabilities`, `logo` and `composerIcon`.
 - [ ] The icon is square and at least 48 by 48 pixels.
 - [ ] The plugin contains only skills: no MCP server, no hooks, no app references.
-- [ ] Open https://platform.openai.com/plugins, choose Upload new or existing plugin, and upload the zip.
+- [ ] Open https://platform.openai.com/plugins, choose Upload new or existing plugin, and upload the plugin zip.
 - [ ] Resolve the automated findings and complete the policy attestations.
 
 The submission guide is at https://developers.openai.com/plugins/deploy/submission.

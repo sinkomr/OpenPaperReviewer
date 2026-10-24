@@ -237,7 +237,7 @@ Purpose: decide in advance what this review must look at and which references it
 Build a numbered list, P-1, P-2, …, of things to check, from three sources.
 
 1. Every core card. They apply to any empirical paper.
-2. Every technique or field card whose `applies_when` line matches something in the methods summary. Say which cards you selected, and which techniques used in the paper have no card.
+2. Every technique or claim card whose `applies_when` line matches the paper: a technique in the methods summary, or a kind of claim the paper makes. The card index lists every folder of cards with the names of the cards in it, and each folder's own index gives the `applies_when` line of every card in that folder. Read the index of each folder with a card that could apply, and open only the cards you select. Say which cards you selected, and which techniques used in the paper have no card.
 3. Every user concern from intake, as the question you restated it into, tagged `user`.
 
 For a technique that matters to the paper's headline and has no card, write up to five items from that field's standard practice, tagged `ad hoc`. Each must name a benchmark source, which goes through verification in Phase 7 like any other citation. An item whose benchmark cannot be verified stays on the list, marked as unverified judgement.
@@ -951,7 +951,7 @@ Sources still unverified and the statements that rest on them:
 
 ## Checklist cards
 
-Phase 1 builds the checklist from these. Use every core card. Use a technique card only if its "Applies when" line matches the paper. If the paper uses a technique that has no card here, follow the Phase 1 instructions for a technique without a card.
+Phase 1 builds the checklist from these. Use every core card below. The index after them lists every other folder of cards in the OpenPaperReviewer repository, with the names of the cards in each. For each folder with a card whose name could apply to the paper, open the folder's index at its link: it gives each card's "Applies when" line. If a card's line matches the paper, open the card from that index, or ask the person running the review to paste it in. If the paper uses a technique that has no card, follow the Phase 1 instructions for a technique without a card.
 
 ### Card C-AVAILABILITY: Availability of data, code and supplementary material
 
@@ -1348,3 +1348,55 @@ Whether the numbers the paper reports come with enough information to judge how 
 | # | Reference | Identifier | Access | Where it supports the item |
 |---|---|---|---|---|
 | 1 | Joint Committee for Guides in Metrology, Evaluation of measurement data: Guide to the expression of uncertainty in measurement, JCGM 100:2008 (2008) | doi:10.59161/JCGM100-2008E | full text | Clause 0.1: without an indication of quality, results cannot be compared with each other or with reference values. Clause 3.1.2: a result is complete only with a statement of its uncertainty. Clause 5.1.2: combined standard uncertainty of a derived quantity. Clause 7.1.4: describe how the result and uncertainty were calculated, list every component, and give all corrections and constants with their sources |
+
+## Index of card folders
+
+### Physics
+
+#### Astrophysics and cosmology
+
+19 cards, index [physics/astrophysics/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/astrophysics/INDEX.md): Asteroseismology and stellar parameters; Astronomical spectroscopy and redshifts; Astrophysical transients; Claims of indirect dark matter signals; Claims of molecular detections in space and planetary atmospheres; Claims of multi-messenger associations; Cosmic microwave background measurements; Distance ladder and the Hubble constant; Exoplanet atmospheres; Exoplanet radial velocities; Exoplanet transits; Galaxy surveys and large-scale structure; Gravitational lensing; Gravitational-wave detection; High-contrast and direct imaging; Photometry and light curves; Radio astronomy and interferometry; Supernova cosmology; X-ray and gamma-ray astronomy
+
+#### Atomic, molecular and optical physics
+
+16 cards, index [physics/amo/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/amo/INDEX.md): Atom interferometry; Atomic clocks and frequency metrology; Atomic magnetometers; Attosecond physics and high-harmonic generation; Bose-Einstein condensates and degenerate Fermi gases; Cavity quantum electrodynamics; Cold and ultracold molecules; Collisions and Feshbach resonances; Ion storage rings and highly charged ions; Laser cooling and trapping of neutral atoms; Optical lattices and quantum-gas microscopy; Optical tweezers and levitated optomechanics; Precision spectroscopy and frequency combs; Rydberg atoms and atom arrays; Strong-field ionization and momentum imaging; Trapped ions
+
+#### Biological physics
+
+13 cards, index [physics/biological/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/biological/INDEX.md): Biomolecular NMR; Cell mechanics; Claims of quantum effects in biology; Cryo-electron microscopy; Fluorescence correlation spectroscopy and diffusion; Macromolecular crystallography; Membranes and electrophysiology; Molecular dynamics as evidence; Molecular motors and step detection; Optical recording of neural activity; Single-molecule fluorescence and FRET; Single-molecule force spectroscopy; Super-resolution fluorescence microscopy
+
+#### Condensed matter and materials
+
+35 cards, index [physics/condensed-matter/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/condensed-matter/INDEX.md): Analytical electron microscopy; Angle-resolved photoemission spectroscopy; Bulk crystal growth and phase purity; Claims of a phase transition; Claims of new magnetic, ferroic or exotic ground states; Claims of superconductivity; Composition and stoichiometry measurement; Electrical transport measurements; Electron microscopy imaging and diffraction; Electron spin and ferromagnetic resonance; Field-effect and gated devices; High-pressure experiments; Local magnetic imaging; Neutron scattering; NMR, NQR and muon spin rotation; Optical absorption, reflectivity and ellipsometry; Persistent currents; Photoelectron spectroscopy; Photoluminescence and ultrafast spectroscopy; Quantum oscillations and high magnetic fields; Quantum transport in mesoscopic devices; Raman and infrared vibrational spectroscopy; Resonant and inelastic X-ray scattering; Scanning probe microscopy; Scanning tunnelling microscopy and spectroscopy; Solution synthesis and characterization of nanocrystals; Specific heat and calorimetry; SQUID and vibrating-sample magnetometry; Thermal and thermoelectric transport; Thin-film growth and epitaxy; Topological insulators; Topological semimetals; Two-dimensional materials and van der Waals heterostructures; X-ray absorption spectroscopy and magnetic dichroism; X-ray diffraction
+
+#### Gravitation and precision tests
+
+12 cards, index [physics/gravitation-precision/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/gravitation-precision/INDEX.md): Antimatter gravity and spectroscopy; Claims of anomalous thrust; Electric dipole moment searches; Exotic spin-dependent forces; Laboratory searches for dark energy; Measurements of G and short-range gravity; Neutron lifetime and neutron interferometry; Small-force measurements; Tests of Lorentz and CPT invariance; Tests of quantum mechanics at large scales; Tests of the equivalence principle; Variation of fundamental constants
+
+#### Methods used across experimental physics
+
+12 cards, index [physics/methods/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/methods/INDEX.md): Cryogenics and low-temperature thermometry; Detector efficiency and dead time; First-principles calculations as supporting evidence; Fitting models to data; Low-noise electronics and lock-in detection; Machine learning in data analysis; Measurements at large facilities; Monte Carlo and simulation-based inference; Quantitative image analysis; Sample environment control; Vacuum, surface preparation and contamination; Variation between samples and laboratories
+
+#### Nuclear physics
+
+13 cards, index [physics/nuclear/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/nuclear/INDEX.md): Activity and dosimetry measurements; Charged-particle detection and identification; Claims of anomalous nuclear effects in condensed matter; Fission yields and isotope production; Gamma-ray spectroscopy; Half-life and decay measurements; Ion-beam analysis; Laser spectroscopy of nuclei; Low-energy nuclear astrophysics; Neutrinoless double-beta decay searches; Neutron detection and spectroscopy; Nuclear cross-section measurements; Nuclear mass measurements
+
+#### Optics and photonics
+
+14 cards, index [physics/optics-photonics/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/optics-photonics/INDEX.md): Cavity optomechanics; Claims of optoelectronic device efficiency; Integrated photonics; Laser characterization; Metamaterials and metasurfaces; Microresonators and frequency combs; Nonlinear optics and frequency conversion; Optical fibres, fibre lasers and amplifiers; Photodetectors; Plasmonics and nanophotonics; Squeezed and non-classical light; Super-resolution and computational imaging; Topological photonics; Ultrafast pulse characterization
+
+#### Particle physics
+
+17 cards, index [physics/particle/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/particle/INDEX.md): Accelerator and beam physics; Axion and hidden-sector searches; Blind analysis; Calorimetry, jets and missing energy; Claims of deviations from the Standard Model; Cosmic-ray and air-shower arrays; Dark matter direct detection; Detector development and performance; Fixed-target and beam-dump experiments; Monte Carlo generators and detector simulation; Neutrino oscillation experiments; Precision measurements at colliders; Rare decays and lepton-flavour violation; Searches for new particles; Statistical inference in particle physics; Tracking and particle identification; Trigger, selection efficiency and luminosity
+
+#### Plasma physics and fusion
+
+14 cards, index [physics/plasma/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/plasma/INDEX.md): Claims for alternative fusion concepts; Claims of fusion performance in magnetic confinement; Claims of inertial-fusion yield and gain; Dusty and complex plasmas; Interferometry and reflectometry; Langmuir probes; Laser-plasma acceleration; Low-temperature and processing plasmas; Magnetic diagnostics and equilibrium reconstruction; Neutron and fusion-product diagnostics; Space plasmas measured in situ; Spectroscopic plasma diagnostics; Thomson scattering; Turbulence and transport in plasmas
+
+#### Quantum information and quantum devices
+
+15 cards, index [physics/quantum-information/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/quantum-information/INDEX.md): Analog quantum simulation; Claims of Majorana modes and topological qubits; Claims of quantum advantage; Claims of quantum-enhanced sensing; Defect qubits; Entanglement and Bell tests; Gate benchmarking; Microwave resonators and circuit QED; Photonic quantum computing and boson sampling; Quantum error correction; Quantum key distribution and networks; Quantum state and process tomography; Semiconductor spin qubits; Single-photon sources and detectors; Superconducting qubits
+
+#### Soft matter, fluids and nonlinear physics
+
+14 cards, index [physics/soft-matter/INDEX.md](https://github.com/sinkomr/OpenPaperReviewer/blob/main/plugin/skills/open-paper-reviewer/references/checklists/physics/soft-matter/INDEX.md): Active matter; Claims of chaos and pattern formation; Colloidal systems; Foams and emulsions; Glass transition and dynamic heterogeneity; Granular materials; Liquid crystals; Microfluidics; Particle tracking and microrheology; Polymer experiments; Rheology; Scattering from soft matter; Turbulence measurement; Wetting, interfaces and surface tension

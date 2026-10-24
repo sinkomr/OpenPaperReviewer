@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -74,6 +75,27 @@ class Packaging(unittest.TestCase):
         self.assertTrue((PLUGIN / "LICENSE").is_file())
         readme_words = re.sub(r"```.*?```", "", (PLUGIN / "README.md").read_text(encoding="utf-8"), flags=re.DOTALL).split()
         self.assertGreaterEqual(len(readme_words), 40)
+
+    def test_release_zips_have_the_layouts_the_uploads_expect(self):
+        builder = load(ROOT / "scripts" / "make_release_zip.py")
+        with tempfile.TemporaryDirectory() as tmp:
+            plugin_zip, skill_zip = Path(tmp) / "plugin.zip", Path(tmp) / "skill.zip"
+            builder.build_plugin_zip(plugin_zip)
+            builder.build_skill_zip(skill_zip)
+            with zipfile.ZipFile(plugin_zip) as archive:
+                names = archive.namelist()
+                self.assertIn(".claude-plugin/plugin.json", names)
+                self.assertIn("skills/open-paper-reviewer/SKILL.md", names)
+            with zipfile.ZipFile(skill_zip) as archive:
+                skill_names = archive.namelist()
+            for label, entries in (("plugin", names), ("skill", skill_names)):
+                with self.subTest(zip=label):
+                    self.assertFalse([n for n in entries if n.startswith("evals/") or "/evals/" in n])
+            # A skill upload wants one top-level folder, SKILL.md directly inside it, and no plugin manifest.
+            self.assertEqual({n.split("/", 1)[0] for n in skill_names}, {"open-paper-reviewer"})
+            self.assertIn("open-paper-reviewer/SKILL.md", skill_names)
+            self.assertIn("open-paper-reviewer/LICENSE", skill_names)
+            self.assertFalse([n for n in skill_names if "plugin.json" in n or ".claude-plugin" in n or ".codex-plugin" in n])
 
     def test_every_file_the_skill_names_exists(self):
         for relative in re.findall(r"`((?:references|scripts)/[\w./<>-]+)`", self.skill_text):

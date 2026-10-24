@@ -31,7 +31,7 @@ claude plugin marketplace add sinkomr/OpenPaperReviewer
 claude plugin install open-paper-reviewer@openpaperreviewer
 ```
 
-In claude.ai or Cowork, add this repository under Customize > Plugins, or upload the plugin zip from the latest release.
+In claude.ai or Cowork, add this repository under Customize > Plugins, or upload `open-paper-reviewer-plugin-<version>.zip` from the latest release as a plugin. To add only the skill, upload `open-paper-reviewer-skill-<version>.zip` as a skill.
 
 Then ask for a review of a paper: "Review this paper" with the file attached or its path given.
 
