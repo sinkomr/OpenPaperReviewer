@@ -73,16 +73,16 @@ class ValidFixture(ReviewCase):
 
 
 class RubricDrift(ReviewCase):
-    """Values that appeared when the rubric was not enforced must all be rejected."""
+    """Values outside the rubric must all be rejected, including near misses a model might write."""
 
     def test_verdict_outside_the_rubric(self):
-        for value in ("Not Supported", "Unsupported / Likely Wrong", "Speculative-but-Plausible", "supported"):
+        for value in ("Not Supported", "Partly Supported", "Likely Wrong", "supported"):
             with self.subTest(value=value):
                 self.edit_json("claims.json", lambda d, v=value: self.claim(d, "B-02").update(verdict=v))
                 self.assert_fails("B-02 verdict")
 
     def test_severity_outside_the_rubric(self):
-        for value in ("Severe", "Moderate", "Minor in isolation, Major as pivot"):
+        for value in ("Severe", "Moderate", "Minor to Major"):
             with self.subTest(value=value):
                 self.edit_json("claims.json", lambda d, v=value: self.claim(d, "B-02").update(severity=v))
                 self.assert_fails("B-02 severity")

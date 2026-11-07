@@ -49,7 +49,7 @@ Then ask for a review, or invoke the skill directly with `$open-paper-reviewer`.
 
 ### In any other LLM
 
-Paste [`prompts/full-review-prompt.md`](prompts/full-review-prompt.md) into a new conversation and follow [`prompts/README.md`](prompts/README.md). There is a version with the physics checklist cards, and a set of single-phase prompts for models with a small context.
+Paste [`prompts/full-review-prompt.md`](prompts/full-review-prompt.md) into a new conversation and follow [`prompts/README.md`](prompts/README.md). It includes the core checklist cards and an index of the others, with links. For models with a small context there is a set of single-phase prompts in [`prompts/phase-prompts/`](prompts/phase-prompts/).
 
 ## Posted reviews
 

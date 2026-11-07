@@ -255,7 +255,7 @@ Treat a review made with this method as a draft for a qualified person to check.
 
 What is known so far:
 
-- The method was developed while reviewing several condensed-matter manuscripts and has been run end to end on short test papers.
+- The method has been run end to end on short test papers.
 - It is not yet calibrated on sound papers. How often it downgrades a claim that deserves to stand has not been measured.
 - A model reviewing a well-known paper may be recalling what has been written about it, not assessing its evidence. Results on famous papers say little about results on new ones.
 - The reviewing model's own citations are a known source of error, which is why verification is a required phase and why every review reports how many of its sources were confirmed, corrected, removed or left unverified.

@@ -17,7 +17,8 @@ Ask for a review of a paper, preprint or manuscript and the skill will:
 In Claude Code:
 
 ```
-/plugin install open-paper-reviewer --marketplace sinkomr/OpenPaperReviewer
+claude plugin marketplace add sinkomr/OpenPaperReviewer
+claude plugin install open-paper-reviewer@openpaperreviewer
 ```
 
 In Codex:
