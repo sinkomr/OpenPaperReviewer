@@ -35,7 +35,7 @@ Run the phases in order. Read each phase file when you reach it, and read a temp
 | 6 Synthesis | `references/phases/06-synthesis.md` | `06_synthesis.md` |
 | 7 Verification | `references/phases/07-verification.md` | `07_verification.md`, `claims.json`, `citations.json` |
 
-Checklist cards for Phase 1 are in `references/checklists/`; its `INDEX.md` says how to choose them. Where your tool can run sub-agents, leave the index and the cards to the Phase 1 sub-agent described below, and do not read them yourself.
+Checklist cards for Phase 1 are in `references/checklists/`. Start at its `INDEX.md`, which says how to choose them.
 
 After Phase 2, tell the user in a few lines what you found: how many claims in which groups, which cards were selected, which references are on the reading list, and any supplementary material that is missing. Then carry on without waiting for a reply.
 
@@ -45,11 +45,12 @@ Phase 0 opens with the intake question. Ask it in the phase file's words, then s
 
 ## Sub-agents
 
-The method works in a single agent. Where your tool can run sub-agents:
+The whole method works in a single agent from start to finish. Where your tool can run sub-agents, these phases can go to them; it is worth doing for a long paper, and seldom for a short one:
 
-- **Always give Phase 1, Part A to a sub-agent, even for a short paper.** It selects the cards and writes the checklist, with the path of each card it selected, into `01_checklist_and_references.md`, so the indexes and cards never enter your context and are not carried through the rest of the run. Give it the concerns as restated at intake. Then read the checklist and write Part B yourself. If a later phase needs the detail of a card, open that card.
-- Phase 3 splits well into one sub-agent per claim group, up to about six at a time, and Phase 4 into one for every one or two references.
-- Phase 7 is best done by a fresh sub-agent that has not seen the reasoning behind the review.
+- Phase 1, Part A: one sub-agent selects the cards and writes the checklist, with the path of each card it selected, into `01_checklist_and_references.md`, so the indexes and cards stay out of your context for the rest of the run. Give it the concerns as restated at intake. Then read the checklist and write Part B yourself. If a later phase needs the detail of a card, open that card.
+- Phase 3: one sub-agent per claim group, up to about six at a time.
+- Phase 4: one sub-agent for every one or two references.
+- Phase 7: a fresh sub-agent that has not seen the reasoning behind the review.
 
 Give each sub-agent `references/rules.md`, `references/rubric.json`, the phase file, the templates that phase names, and the earlier outputs it needs: `00_extraction.md` for Phase 1; the paper, `00_extraction.md`, the checklist and the registry for Phases 3 and 4; the paper and every file for Phase 7. In a run nobody is watching, run sub-agents in the foreground, or do not end your turn until all of them have finished: the session can stop when your turn ends, and their work is lost. This matters most for Phase 7, the last thing a run does. Read what each sub-agent wrote, and correct any value that is not in the rubric. Add a sub-agent that ran on a different model or effort to `models` in `run.json`, with its phases.
 
