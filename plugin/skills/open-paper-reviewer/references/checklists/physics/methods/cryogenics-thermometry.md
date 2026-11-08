@@ -91,5 +91,5 @@ version: "0.1"
 | 6 | E. T. Swartz and R. O. Pohl, Thermal boundary resistance, Rev. Mod. Phys. 61, 605 (1989) | doi:10.1103/RevModPhys.61.605 |
 | 7 | C. P. Scheller et al., Silver-epoxy microwave filters and thermalizers for millikelvin experiments, Appl. Phys. Lett. 104, 211106 (2014); read as preprint arXiv:1403.6205 | doi:10.1063/1.4880099 |
 | 8 | S. Krinner et al., Engineering cryogenic setups for 100-qubit scale superconducting circuit systems, EPJ Quantum Technol. 6, 2 (2019); read as preprint arXiv:1806.07862 | doi:10.1140/epjqt/s40507-019-0072-0 |
-| 9 | J. R. Prance et al., Nanoelectronic thermometers optimised for sub-10 millikelvin operation, Nat. Commun. 7, 10455 (2016); read as preprint arXiv:1505.07244 | doi:10.1038/ncomms10455 |
+| 9 | D. I. Bradley et al., Nanoelectronic primary thermometry below 4 mK, Nat. Commun. 7, 10455 (2016); read as preprint arXiv:1505.07244, titled Nanoelectronic thermometers optimised for sub-10 millikelvin operation | doi:10.1038/ncomms10455 |
 | 10 | Z. Iftikhar et al., Primary thermometry triad at 6 mK in mesoscopic circuits, Nat. Commun. 7, 12908 (2016); read as preprint arXiv:1610.03716 | doi:10.1038/ncomms12908 |
