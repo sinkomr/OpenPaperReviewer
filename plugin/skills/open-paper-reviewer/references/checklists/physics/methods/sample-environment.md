@@ -3,13 +3,11 @@ id: T-SAMPLE-ENVIRONMENT
 name: Sample environment control
 type: technique
 field: physics/methods
-applies_when: the paper bases a claim on the magnetic field, pressure, strain, electric field or atmosphere at the sample, on hysteresis between sweep directions in temperature, field or gate voltage, on field-cooled and zero-field-cooled comparisons, or on data from a pressure or strain cell
+applies_when: the paper bases a claim on the magnetic field, strain, electric field or atmosphere at the sample, on hysteresis between sweep directions in temperature, field or gate voltage, on coercive fields or field-cooled and zero-field-cooled comparisons, or on data from a strain cell
 version: "0.1"
 ---
 
 # Sample environment control
-
-Sample environments are used to claim that a property was measured under stated conditions of temperature, magnetic field, electric field, pressure, strain or atmosphere, and to claim how the property depends on those conditions, including hysteresis and dependence on history such as field-cooled (FC) and zero-field-cooled (ZFC) protocols. Each such claim assumes that the conditions at the sample are the ones set or read at the instrument, for example in a superconducting magnet, a piston-cylinder cell, a diamond anvil cell (DAC) or a piezoelectric strain cell.
 
 ## 1. Magnetic field at the sample
 
@@ -39,29 +37,9 @@ Sample environments are used to claim that a property was measured under stated 
 
 **Resolved by.** Sweep direction, range, rate and settling times stated for each data set; both sweep directions shown; hysteresis measured at several rates or with waits at fixed values, and quasistatic values obtained from the rate dependence; for temperature sweeps, a reference with a transition known to have no hysteresis measured in the same setup at the same rates; for gated devices, the bias history before the sweep stated.
 
-**Benchmark.** [1], [3], [9]
+**Benchmark.** [1], [3], [6]
 
-## 4. Pressure at the measurement temperature
-
-**Question.** How was the pressure at the sample determined at the temperature of each measurement, and is it a value measured in situ at low temperature rather than the pressure set at room temperature or inferred from the applied load?
-
-**Why it matters.** Pressure estimated from force and area is uncertain because of friction and dimensional changes. In a piston-cylinder cell the pressure falls continuously on cooling, with a steeper drop where the pressure medium solidifies, by a few tenths of a gigapascal between room temperature and a few kelvin; at low loads it can fall to zero. Pressure in a DAC can also change on cooling, by tens of per cent at low pressure with some media. A gauge read at one temperature fixes the pressure only there.
-
-**Resolved by.** The manometer named and located with the sample, such as the superconducting transition of lead, a manganin coil or ruby fluorescence; pressure measured at or near the temperatures of the claims, or a calibrated pressure-temperature curve for that cell, medium and filling used to assign it; the uncertainty of the pressure stated and carried into any phase boundary or pressure coefficient.
-
-**Benchmark.** [4], [5]
-
-## 5. Pressure medium and hydrostatic conditions
-
-**Question.** Which pressure-transmitting medium was used, does it stay liquid or hydrostatic over the pressures and temperatures of the claims, and does the paper show how uniform the pressure is across the sample?
-
-**Why it matters.** Every liquid medium solidifies above a pressure that falls as temperature falls, and a solid medium transmits shear stress, so the sample sees pressure gradients and uniaxial stress. Media differ widely: some solidify at about 1 to 2.5 GPa even at room temperature, while helium, nitrogen and argon stay close to hydrostatic to about 10 GPa at low temperature. Solidification of the medium can itself produce anomalies in the measured property of the sample.
-
-**Resolved by.** The medium named with its known solidification line or hydrostatic limit, and the claims placed relative to it; the uniformity checked, for example by the width of the ruby fluorescence line at the temperature of the measurement; features that coincide with solidification of the medium identified and not attributed to the sample; where possible, key results repeated with a more hydrostatic medium.
-
-**Benchmark.** [4], [5], [6]
-
-## 6. Strain transmitted to the sample
+## 4. Strain transmitted to the sample
 
 **Question.** How was the strain in the sample determined, as distinct from the displacement or voltage applied by the strain device, and how were the strain-free point and the uniformity of strain across the measured region established?
 
@@ -69,9 +47,9 @@ Sample environments are used to claim that a property was measured under stated 
 
 **Resolved by.** A displacement or strain sensor read at the measurement temperature, with its calibration and any shift between cool-downs stated; the transfer through the bond estimated or measured; the strain-free point located with its uncertainty; the measured region kept away from the bonded ends and the mounting described, including sample dimensions, bond thickness and symmetry.
 
-**Benchmark.** [7]
+**Benchmark.** [4]
 
-## 7. Atmosphere and exposure
+## 5. Atmosphere and exposure
 
 **Question.** In what atmosphere was the sample stored, mounted and measured (vacuum, inert gas, exchange gas or air, with humidity where relevant), how long was it exposed to air, and does the paper separate effects of the atmosphere from the effect it claims?
 
@@ -79,18 +57,15 @@ Sample environments are used to claim that a property was measured under stated 
 
 **Resolved by.** The atmosphere, pressure of any exchange gas, humidity and illumination stated for storage, preparation and measurement, with the time between preparation and measurement; key results repeated in a controlled atmosphere or after encapsulation; drifts with time shown and assigned either to the sample or to the environment.
 
-**Benchmark.** [3], [8]
+**Benchmark.** [3], [5]
 
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | M. Sawicki, W. Stefanowicz and A. Ney, Sensitive SQUID magnetometry for studying nanomagnetism, Semicond. Sci. Technol. 26, 064006 (2011); read as preprint arXiv:1101.4764 | doi:10.1088/0268-1242/26/6/064006 | full text | Secs. II.3.1 and II.3.2: no absolute field sensor, so the field follows from the power-supply current; flux pinned in the magnet leaves a trapped field opposite to the last large field, up to about 30 Oe in a 7 T magnet, which inverts loops and can make a diamagnetic substrate look ferromagnetic; remanent field calibrated with a paramagnetic Dy2O3 or Pd reference; a magnet reset helps only near zero field. Sec. II.3.3 and Fig. 8: field drift from flux creep and escape recorded over about 3 hours at a set field of 1 kOe, with a trapped field of about -15 Oe when 1 kOe is approached from 10 kOe without a reset, and drift about ten times smaller after a reset. Sec. III and Fig. 13: FC and ZFC curves with the sweep protocol stated |
-| 2 | A. Quintana-Nedelcos, J. L. Sánchez Llamazares, C. F. Sánchez-Valdés, P. Álvarez Alonso, P. Gorria, P. Shamba and N. A. Morley, On the correct estimation of the magnetic entropy change across the magneto-structural transition from the Maxwell relation: Study of MnCoGeBx alloy ribbons, J. Alloys Compd. 694, 1189–1195 (2017) | doi:10.1016/j.jallcom.2016.10.116 | abstract | Abstract: two thermal procedures for measuring isothermal magnetisation at a first-order transition are compared; reliable values need the thermal and magnetic history taken into account, by measuring each isotherm in one direction after a thermal cycle |
-| 3 | Y. Yu. Illarionov, T. Knobloch, M. Jech, M. Lanza, D. Akinwande, M. I. Vexler, T. Mueller, M. C. Lemme, G. Fiori, F. Schwierz and T. Grasser, Insulators for 2D nanoelectronics: the gap to bridge, Nat. Commun. 11, 3385 (2020) | doi:10.1038/s41467-020-16640-8 | full text | Section on border traps and device stability with Fig. 5: hysteresis and bias-temperature instability share an origin in charge trapping in border traps, giving different thresholds in forward and reverse sweeps; trap time constants depend on gate bias, and the hysteresis width changes with sweep speed. Box 2: trap time constants are thermally activated. Section on interface quality and device performance: adsorbates on unprotected channels contribute to interface trap density |
-| 4 | L. Xiang, E. Gati, S. L. Bud'ko, R. A. Ribeiro, A. Ata, U. Tutsch, M. Lang and P. C. Canfield, Characterization of the pressure coefficient of manganin and temperature evolution of pressure in piston-cylinder cells, Rev. Sci. Instrum. 91, 095103 (2020); read as preprint arXiv:2007.11703 | doi:10.1063/5.0022650 | full text | Introduction: pressure from force and area is ambiguous because of friction and dimensional changes, and differential thermal expansion of cell and medium changes the pressure on cooling. Sec. III.2: pressure falls continuously on cooling, more steeply where the medium solidifies, by about 0.26 to 0.47 GPa between 300 K and 1.8 K. Secs. III.2 and VI.2: the lead transition fixes the pressure near 7 K only. Sec. IV: a separate calibration is needed for other cells, media or filling factors. Appendix: a low initial pressure drops to zero near 200 K |
-| 5 | N. Tateiwa and Y. Haga, Evaluations of pressure-transmitting media for cryogenic experiments with diamond anvil cell, Rev. Sci. Instrum. 80, 123901 (2009); read as preprint arXiv:1001.0454 | doi:10.1063/1.3265992 | full text | Introduction: liquid media solidify on cooling and their shear stress makes the pressure non-hydrostatic at low temperature. Sec. III and Sec. IV: fourteen media compared by ruby line broadening at 77 K, which reflects pressure gradients and uniaxial stress; some media solidify at about 1.2 to 2.4 GPa at room temperature, while nitrogen, argon and helium stay close to hydrostatic to 10 GPa; pressure changes on cooling of about 30 to 40% at 2 GPa for helium and nitrogen |
-| 6 | M. S. Torikachvili, S. K. Kim, E. Colombier, S. L. Bud'ko and P. C. Canfield, Solidification and loss of hydrostaticity in liquid media used for pressure measurements, Rev. Sci. Instrum. 86, 123904 (2015) | doi:10.1063/1.4937478 | abstract | Abstract: solidification lines of nine liquid pressure media mapped to 2.3 GPa using resistance anomalies of a sample, separating hydrostatic from non-hydrostatic conditions; the room-temperature freezing pressure is the upper limit for the medium to count as hydrostatic |
-| 7 | C. W. Hicks, M. E. Barber, S. D. Edkins, D. O. Brodsky and A. P. Mackenzie, Piezoelectric-based apparatus for strain tuning, Rev. Sci. Instrum. 85, 065003 (2014); read as preprint arXiv:1403.4368 | doi:10.1063/1.4881611 | full text | Section on current methods: the piezoelectric stacks lengthen on cooling, which can strain a sample beyond the range of the stacks; section on the apparatus: the design cancels this thermal expansion. Section on the apparatus: epoxy deformation cannot be ignored in finding the sample strain; a strain gauge measures the displacement, with temperature dependence and shifts between cool-downs. Appendices A and B and Table I: load transfer length through the epoxy, strain inhomogeneity near the ends and bending from asymmetric mounting. Section on sample mounting: buckling of thin samples from the Euler formula. Fig. 3 caption: uncertainty in the zero-strain point |
-| 8 | M. V. Khenkin, E. A. Katz, A. Abate et al., Consensus statement for stability assessment and reporting for perovskite photovoltaics based on ISOS procedures, Nat. Energy 5, 35–49 (2020) | doi:10.1038/s41560-019-0529-5 | abstract | Abstract: inconsistent procedures and reported parameters make stability results hard to reproduce; the consensus adds procedures to separate degradation induced by the ambient from other stress factors, and lists the procedural details to report for reproducibility |
-| 9 | T. Bar, S. K. Choudhary, M. A. Ashraf, K. S. Sujith, S. Puri, S. Raj and B. Bansal, Kinetic spinodal instabilities in the Mott transition in V2O3: evidence from hysteresis scaling and dissipative phase ordering, Phys. Rev. Lett. 121, 045701 (2018); read as preprint arXiv:1808.00693 | doi:10.1103/PhysRevLett.121.045701 | full text | Main text, Dynamic hysteresis: the onset temperatures on heating and cooling shift with the temperature ramp rate as a power law, and the quasistatic transition temperatures are obtained from fits over many rates. Supplement II.2: a control sample with a transition without hysteresis, measured at 5 to 40 K/min in the same cryostat, shows no difference between heating and cooling and no shift with rate. Supplement IV: relaxation time of the sample and substrate to the bath temperature of about 3 s |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | M. Sawicki et al., Sensitive SQUID magnetometry for studying nanomagnetism, Semicond. Sci. Technol. 26, 064006 (2011); read as preprint arXiv:1101.4764 | doi:10.1088/0268-1242/26/6/064006 |
+| 2 | A. Quintana-Nedelcos et al., On the correct estimation of the magnetic entropy change across the magneto-structural transition from the Maxwell relation: Study of MnCoGeBx alloy ribbons, J. Alloys Compd. 694, 1189 (2017) | doi:10.1016/j.jallcom.2016.10.116 |
+| 3 | Y. Yu. Illarionov et al., Insulators for 2D nanoelectronics: the gap to bridge, Nat. Commun. 11, 3385 (2020) | doi:10.1038/s41467-020-16640-8 |
+| 4 | C. W. Hicks et al., Piezoelectric-based apparatus for strain tuning, Rev. Sci. Instrum. 85, 065003 (2014); read as preprint arXiv:1403.4368 | doi:10.1063/1.4881611 |
+| 5 | M. V. Khenkin et al., Consensus statement for stability assessment and reporting for perovskite photovoltaics based on ISOS procedures, Nat. Energy 5, 35 (2020) | doi:10.1038/s41560-019-0529-5 |
+| 6 | T. Bar et al., Kinetic spinodal instabilities in the Mott transition in V2O3: evidence from hysteresis scaling and dissipative phase ordering, Phys. Rev. Lett. 121, 045701 (2018); read as preprint arXiv:1808.00693 | doi:10.1103/PhysRevLett.121.045701 |

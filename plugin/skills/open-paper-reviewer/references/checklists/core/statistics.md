@@ -33,11 +33,11 @@ Whether the amount of data, and the way it was analysed, can carry the conclusio
 
 ## 3. Analysis choices disclosed
 
-**Question.** Were the choices that affect the result (which data to exclude, when to stop collecting, which comparisons to report) fixed in advance, or are all of them disclosed?
+**Question.** Were the choices that affect the result (which data to exclude or to show as representative, when to stop collecting, which comparisons to report) fixed in advance, or are all of them disclosed?
 
 **Why it matters.** When these choices are made after seeing the data and not reported, the chance of a false positive rises well above the nominal rate.
 
-**Resolved by.** A statement of the exclusion rules and whether they were set in advance, the stopping rule, and every comparison that was made.
+**Resolved by.** The exclusion rules, whether they were set in advance and how many data were excluded; how the examples shown were chosen; the stopping rule; and every comparison that was made.
 
 **Benchmark.** [1], [4]
 
@@ -53,11 +53,11 @@ Whether the amount of data, and the way it was analysed, can carry the conclusio
 
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | N. Percie du Sert, V. Hurst, A. Ahluwalia et al., The ARRIVE guidelines 2.0: Updated guidelines for reporting animal research, PLoS Biology 18(7), e3000410 (2020) | doi:10.1371/journal.pbio.3000410 | full text | Table "ARRIVE Essential 10": item 1b asks for the experimental unit; item 2 for the exact number of units per group and how the sample size was decided; item 3 for inclusion and exclusion criteria and whether they were set in advance |
-| 2 | K. S. Button, J. P. Ioannidis, C. Mokrysz et al., Power failure: why small sample size undermines the reliability of neuroscience, Nature Reviews Neuroscience 14, 365-376 (2013) | doi:10.1038/nrn3475 | abstract | Abstract: low statistical power lowers the likelihood that a significant result reflects a true effect and leads to overestimated effect sizes |
-| 3 | American Statistical Association, American Statistical Association releases statement on statistical significance and p-values, press release (7 March 2016) | https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf | full text | Principles 3 and 5: conclusions should not rest only on whether a p-value passes a threshold, and a p-value does not measure the size or importance of an effect |
-| 4 | J. P. Simmons, L. D. Nelson and U. Simonsohn, False-positive psychology: undisclosed flexibility in data collection and analysis allows presenting anything as significant, Psychological Science 22, 1359-1366 (2011) | doi:10.1177/0956797611417632 | abstract | Abstract: flexibility in data collection, analysis and reporting sharply raises false-positive rates; the remedy proposed is disclosure |
-| 5 | Joint Committee for Guides in Metrology, Evaluation of measurement data: Guide to the expression of uncertainty in measurement, JCGM 100:2008 (2008) | doi:10.59161/JCGM100-2008E | full text | Clause 4.2.2: individual observations of a quantity differ because of random effects, and the experimental standard deviation describes their dispersion about the mean |
-| 6 | J. B. Carlisle, Data fabrication and other reasons for non-random sampling in 5087 randomised, controlled trials in anaesthetic and general medical journals, Anaesthesia 72, 944-952 (2017) | doi:10.1111/anae.13938 | abstract | Abstract: the probability of a set of reported means can be calculated from their standard deviations and group sizes; across the trials examined there was an excess of baseline means more alike than chance allocation would give |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | N. Percie du Sert et al., The ARRIVE guidelines 2.0: Updated guidelines for reporting animal research, PLoS Biology 18(7), e3000410 (2020) | doi:10.1371/journal.pbio.3000410 |
+| 2 | K. S. Button et al., Power failure: why small sample size undermines the reliability of neuroscience, Nature Reviews Neuroscience 14, 365 (2013) | doi:10.1038/nrn3475 |
+| 3 | American Statistical Association, American Statistical Association releases statement on statistical significance and p-values, press release (7 March 2016) | https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf |
+| 4 | J. P. Simmons et al., False-positive psychology: undisclosed flexibility in data collection and analysis allows presenting anything as significant, Psychological Science 22, 1359 (2011) | doi:10.1177/0956797611417632 |
+| 5 | Joint Committee for Guides in Metrology, Evaluation of measurement data: Guide to the expression of uncertainty in measurement, JCGM 100:2008 (2008) | doi:10.59161/JCGM100-2008E |
+| 6 | J. B. Carlisle, Data fabrication and other reasons for non-random sampling in 5087 randomised, controlled trials in anaesthetic and general medical journals, Anaesthesia 72, 944 (2017) | doi:10.1111/anae.13938 |

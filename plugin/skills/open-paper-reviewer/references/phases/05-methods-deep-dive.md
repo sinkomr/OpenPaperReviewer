@@ -16,14 +16,14 @@ Choose four to ten topics that matter for this paper, from:
 
 Processing steps interact, so consider them together and not one at a time.
 
-For each topic use the `methods-topic` template: what the paper does, with locations; what standard practice requires, with sources; the gap, if any, and the claims it affects; and what would close it. Where the paper's practice is sound, say so in the same place.
+Write each topic with the `methods-topic` template, saying where the paper's practice is sound as well as where it has a gap.
 
 ## Checklist close-out
 
-Go through every item on the Phase 1 checklist and give each an answer: complies, departs, not enough detail to tell, or not applicable, with where in the review it is addressed. Nothing on the list is left unanswered.
+Answer every Phase 1 checklist item in the template's close-out table. Nothing on the list is left unanswered.
 
 ## Effect on verdicts
 
-End with the table of topics, claims affected, and any Phase 3 verdict that changes as a result. Make those changes in the Phase 3 files.
+End with the template's table, and make any verdict change in the Phase 3 files.
 
 Write to `05_methods.md`.

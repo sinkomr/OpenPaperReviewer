@@ -15,5 +15,5 @@
 - What problem does this solve?
 - [ ] `python3 -m unittest discover -s tests` passes.
 - [ ] `python3 scripts/build_prompts.py` was run and its output is included.
-- [ ] For a card: I opened every source listed, and `scripts/check_card_sources.py` reports no mismatch.
+- [ ] For a card: I opened every source listed and recorded in `card-sources/` where each supports the card, and `scripts/check_card_sources.py` reports no mismatch.
 - [ ] For a change to the rubric, phases or rules: the version is raised in both plugin manifests and in the skill.

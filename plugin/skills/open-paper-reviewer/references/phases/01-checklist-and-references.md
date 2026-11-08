@@ -7,7 +7,7 @@ Purpose: decide in advance what this review must look at and which references it
 Build a numbered list, P-1, P-2, …, of things to check, from three sources.
 
 1. Every core card. They apply to any empirical paper.
-2. Every technique or claim card whose `applies_when` line matches the paper: a technique in the methods summary, or a kind of claim the paper makes. The card index lists every folder of cards with the names of the cards in it, and each folder's own index gives the `applies_when` line of every card in that folder. Read the index of each folder with a card that could apply, and open only the cards you select. Say which cards you selected, and which techniques used in the paper have no card.
+2. Every technique or claim card whose `applies_when` line matches the paper: a technique in the methods summary, or a kind of claim the paper makes. Find them through the card index, and open only the cards you select. Say which cards you selected, with their paths, and which techniques used in the paper have no card.
 3. Every user concern from intake, as the question you restated it into, tagged `user`.
 
 For a technique that matters to the paper's headline and has no card, write up to five items from that field's standard practice, tagged `ad hoc`. Each must name a benchmark source, which goes through verification in Phase 7 like any other citation. An item whose benchmark cannot be verified stays on the list, marked as unverified judgement.
@@ -18,7 +18,7 @@ The items are questions for Phase 3 and Phase 5 to answer. A paper that does not
 
 ## Part B: Reference triage
 
-For every reference in the paper's list, record:
+For every reference that a claim, a number, a method or the theoretical argument leans on, record:
 
 - **Role.** What the paper uses it for: sole support for a claim; one of several supports; source of a number; basis of a method; theoretical basis; comparison or benchmark; background.
 - **Where cited.**
@@ -28,6 +28,8 @@ For every reference in the paper's list, record:
   - high: a headline or tier-3 claim leans on it as its sole or main support; or it supplies a key number or the theoretical basis of the argument; or it carries a retraction or expression of concern and any claim leans on it;
   - medium: it supports a tier-2 claim or justifies a method choice;
   - low: background.
+
+Check the record and notices of every other reference as well, but list those references on one line as background, low priority, naming only any whose record does not match, cannot be found or carries a notice. A background reference with no DOI or arXiv identifier may be marked not checked.
 
 Priority depends only on how much the paper's argument leans on the reference and on the state of its record. Who wrote it plays no part.
 

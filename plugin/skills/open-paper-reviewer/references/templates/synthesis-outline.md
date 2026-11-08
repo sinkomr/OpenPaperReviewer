@@ -27,7 +27,7 @@ One paragraph: what the paper claims, what holds, what does not, and the single 
 
 ## 2. What the paper establishes
 
-The claims that stand, by id, and what they amount to. Include methods that were done well.
+The claims that stand, by id, and what they amount to. Include methods that were done well, described as what the paper shows, never as qualities of its authors such as honesty or care.
 
 ## 3. Main problems
 

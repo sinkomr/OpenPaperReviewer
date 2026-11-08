@@ -8,15 +8,7 @@ Complete the reading list fixed at the end of Phase 2, less anything already don
 
 ## For each reference
 
-Write one file in `04_references/` using the `reference-deep-dive` template:
-
-1. **Record.** The citation as printed against the record you found, field by field, and any correction, expression of concern or retraction on it.
-2. **Access.** The level you reached (full text, abstract, metadata only, or none) and where you read it.
-3. **What the source reports.** System, method, conditions, main results, and the limitations its own authors state, with a short supporting quotation.
-4. **How the paper uses it.** Each passage that cites it and the claims involved.
-5. **Alignment.** Same system or population? Same regime? Same quantity? Experiment or theory? Does the source report the opposite, or a null result?
-6. **Citation verdict**, from the rubric.
-7. **Consequence.** Which claim verdicts change. Make the change in the Phase 3 file and note it here.
+Write one file in `04_references/` using the `reference-deep-dive` template. Where a claim verdict changes, make the change in the Phase 3 file and note it under Consequence.
 
 ## Rules
 

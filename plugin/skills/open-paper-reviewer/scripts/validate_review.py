@@ -66,7 +66,7 @@ class Report:
 
 
 def values(rubric, key):
-    return [entry["value"] for entry in rubric[key]]
+    return [entry["value"] if isinstance(entry, dict) else entry for entry in rubric[key]]
 
 
 def is_blank(value, extra=()):
@@ -382,33 +382,26 @@ def check_claim_links(claims, citations, report):
         basis = claim.get("basis", [])
         if not isinstance(basis, list):
             continue
+        checkable = False
         for entry in basis:
             if not isinstance(entry, str):
                 continue
             entry = entry.strip()
             if entry.casefold().startswith("paper:"):
+                checkable = checkable or bool(entry[6:].strip())
                 continue
             if not CITATION_ID.match(entry):
                 report.error(label, f'basis entry {entry!r} must be "paper: <location>" or a citation id such as C-001')
             elif citations is not None and entry not in citations:
                 report.error(label, f"basis cites {entry}, which is not in citations.json")
-        needs_basis = claim.get("verdict") == "Contradicted" or claim.get("severity") == "Critical"
-        if needs_basis:
-            checkable = []
-            for entry in basis:
-                if not isinstance(entry, str):
-                    continue
-                entry = entry.strip()
-                if entry.casefold().startswith("paper:") and entry[6:].strip():
-                    checkable.append(entry)
-                elif citations and entry in citations and citations[entry].get("status") in VERIFIED:
-                    checkable.append(entry)
-            if not checkable:
-                report.error(
-                    label,
-                    "Contradicted or Critical needs a basis anyone can check: a location in the paper, "
-                    "or a citation that is confirmed or corrected",
-                )
+            if citations and entry in citations and citations[entry].get("status") in VERIFIED:
+                checkable = True
+        if (claim.get("verdict") == "Contradicted" or claim.get("severity") == "Critical") and not checkable:
+            report.error(
+                label,
+                "Contradicted or Critical needs a basis anyone can check: a location in the paper, "
+                "or a citation that is confirmed or corrected",
+            )
 
 
 def computed_verification(citations, web_access=True):
@@ -449,19 +442,22 @@ def check_phase_files(folder, posting, report):
             report.error(stem, f"phase output is missing (expected {stem}.md or a {stem}/ folder of .md files)")
     has_extraction = phase_text(folder, "00_extraction") is not None
     if posting and has_extraction:
-        report.error("00_extraction", "must not be posted: it reproduces the paper's abstract and reference list")
+        report.error("00_extraction", "must not be posted: it reproduces the paper's abstract")
     if not posting and not has_extraction:
         report.error("00_extraction", "phase output is missing (expected 00_extraction.md)")
+
+
+def mentions(text, claim_id):
+    return re.search(r"(?<![A-Za-z0-9])" + re.escape(claim_id) + r"(?![0-9])", text) is not None
 
 
 def check_ids_in_phases(folder, claims, report):
     registry = phase_text(folder, "02_claims_registry") or ""
     scrutiny = phase_text(folder, "03_scrutiny") or ""
     for claim in claims:
-        pattern = re.compile(r"(?<![A-Za-z0-9])" + re.escape(claim["id"]) + r"(?![0-9])")
-        if registry and not pattern.search(registry):
+        if registry and not mentions(registry, claim["id"]):
             report.error(f"claims.json {claim['id']}", "does not appear in the claims registry")
-        if scrutiny and not pattern.search(scrutiny):
+        if scrutiny and not mentions(scrutiny, claim["id"]):
             report.error(f"claims.json {claim['id']}", "has no block in the scrutiny files")
 
 
@@ -472,26 +468,20 @@ def check_synthesis(folder, run, claims, citations, report):
     where = "06_synthesis"
     if not ESTABLISHES_HEADING.search(text):
         report.error(where, 'a section headed "What the paper establishes" is required')
-    absent = [
-        claim["id"]
-        for claim in claims
-        if not re.search(r"(?<![A-Za-z0-9])" + re.escape(claim["id"]) + r"(?![0-9])", text)
-    ]
+    absent = [claim["id"] for claim in claims if not mentions(text, claim["id"])]
     if absent:
         report.error(where, "the verdict table must list every claim; missing: " + ", ".join(absent))
     stated = VERIFICATION_LINE.search(text)
     if not stated:
         report.error(where, 'the header must carry the line "Citation verification: all | partial | none"')
     if citations is not None:
-        expected = computed_verification(citations, run.get("web_access") if isinstance(run, dict) else True)
+        expected = computed_verification(citations, run.get("web_access"))
         if stated and stated.group(1).casefold() != expected:
             report.error(where, f"says citation verification is {stated.group(1)!r}; citations.json makes it {expected!r}")
-        review = run.get("review", {}) if isinstance(run, dict) else {}
+        review = run.get("review", {})
         recorded = review.get("citation_verification") if isinstance(review, dict) else None
         if isinstance(recorded, str) and recorded in ("all", "partial", "none") and recorded != expected:
             report.error("run.json", f"review.citation_verification is {recorded!r}; citations.json makes it {expected!r}")
-    if not isinstance(run, dict):
-        return
     for model in run.get("models") or []:
         if not isinstance(model, dict):
             continue
@@ -538,7 +528,7 @@ def expected_path(run):
 
 
 def check_posting_path(folder, run, report):
-    if not isinstance(run, dict):
+    if not run:
         return
     actual = folder.resolve().parts[-3:]
     wanted = expected_path(run)
@@ -560,6 +550,7 @@ def validate(folder, posting=False, check_path=False):
 
     if run is not None:
         check_run(run, rubric, posting, report)
+    run = run if isinstance(run, dict) else {}
     claims = check_claims(claims_data, rubric, report) if claims_data is not None else []
     claim_ids = {claim["id"] for claim in claims}
     citations = check_citations(citations_data, rubric, claim_ids, report) if citations_data is not None else None

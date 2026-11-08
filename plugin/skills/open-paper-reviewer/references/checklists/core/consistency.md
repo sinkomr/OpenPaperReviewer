@@ -53,7 +53,7 @@ Whether the paper agrees with itself.
 
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | M. B. Nuijten, C. H. J. Hartgerink, M. A. L. M. van Assen, S. Epskamp and J. M. Wicherts, The prevalence of statistical reporting errors in psychology (1985-2013), Behavior Research Methods 48, 1205-1226 (2016) | doi:10.3758/s13428-015-0664-2 | abstract | Abstract: about half of the papers examined contained at least one p-value inconsistent with its test statistic and degrees of freedom, and about one in eight a gross inconsistency that may have affected the conclusion |
-| 2 | E. M. Bik, A. Casadevall and F. C. Fang, The prevalence of inappropriate image duplication in biomedical research publications, mBio 7(3), e00809-16 (2016) | doi:10.1128/mBio.00809-16 | full text | Results, "Papers containing inappropriately duplicated images" and "Classification of inappropriately duplicated images": a visual screen of 20,621 papers found 782 (3.8%) with at least one duplicated image; the simplest kind is identical panels, within one figure or between figures of the same paper, presented as different experimental conditions |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | M. B. Nuijten et al., The prevalence of statistical reporting errors in psychology (1985-2013), Behavior Research Methods 48, 1205 (2016) | doi:10.3758/s13428-015-0664-2 |
+| 2 | E. M. Bik et al., The prevalence of inappropriate image duplication in biomedical research publications, mBio 7(3), e00809-16 (2016) | doi:10.1128/mBio.00809-16 |

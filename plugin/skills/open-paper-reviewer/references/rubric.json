@@ -1,258 +1,73 @@
 {
   "schema_version": "0.1",
   "verdict": [
-    {
-      "value": "Supported",
-      "definition": "The evidence in the paper, read with the cited and established literature, establishes the claim as written."
-    },
-    {
-      "value": "Partially Supported",
-      "definition": "The claim holds only in a narrower or weaker form than written. The review states exactly which narrower statement is established."
-    },
-    {
-      "value": "Unsupported",
-      "definition": "The evidence offered does not establish the claim. The claim may still be true; it has not been shown."
-    },
-    {
-      "value": "Contradicted",
-      "definition": "The paper's own data, or an outside source the reviewer opened, is inconsistent with the claim."
-    },
-    {
-      "value": "Cannot Evaluate",
-      "definition": "The claim cannot be judged from the material available, for example because its evidence is in supplementary material that was not supplied."
-    }
+    {"value": "Supported", "definition": "The evidence in the paper, read with the cited and established literature, establishes the claim as written."},
+    {"value": "Partially Supported", "definition": "The claim holds only in a narrower or weaker form than written. The review states exactly which narrower statement is established."},
+    {"value": "Unsupported", "definition": "The evidence offered does not establish the claim. The claim may still be true; it has not been shown."},
+    {"value": "Contradicted", "definition": "The paper's own data, or an outside source the reviewer opened, is inconsistent with the claim."},
+    {"value": "Cannot Evaluate", "definition": "The claim cannot be judged from the material available, for example because its evidence is in supplementary material that was not supplied."}
   ],
   "severity": [
-    {
-      "value": "Critical",
-      "definition": "A headline claim of the paper does not stand if this claim fails."
-    },
-    {
-      "value": "Major",
-      "definition": "A substantial conclusion changes if this claim fails, but the headline could survive in a narrower form."
-    },
-    {
-      "value": "Minor",
-      "definition": "A supporting detail changes if this claim fails; no conclusion does."
-    },
-    {
-      "value": "Cosmetic",
-      "definition": "An error of wording, labelling, formatting or citation form that affects no conclusion."
-    }
+    {"value": "Critical", "definition": "A headline claim of the paper does not stand if this claim fails."},
+    {"value": "Major", "definition": "A substantial conclusion changes if this claim fails, but the headline could survive in a narrower form."},
+    {"value": "Minor", "definition": "A supporting detail changes if this claim fails; no conclusion does."},
+    {"value": "Cosmetic", "definition": "An error of wording, labelling, formatting or citation form that affects no conclusion."}
   ],
   "confidence": [
-    {
-      "value": "High",
-      "definition": "The verdict rests on evidence the reviewer read directly (the paper's own data and, for outside sources, their full text) and on reasoning an expert would be unlikely to dispute."
-    },
-    {
-      "value": "Medium",
-      "definition": "The verdict rests partly on abstracts or secondary sources, or on a judgement that experts might weigh differently."
-    },
-    {
-      "value": "Low",
-      "definition": "The verdict rests on limited access to the evidence or on recollection of the field. Treat it as a flag for an expert to check."
-    }
+    {"value": "High", "definition": "The verdict rests on evidence the reviewer read directly (the paper's own data and, for outside sources, their full text) and on reasoning an expert would be unlikely to dispute."},
+    {"value": "Medium", "definition": "The verdict rests partly on abstracts or secondary sources, or on a judgement that experts might weigh differently."},
+    {"value": "Low", "definition": "The verdict rests on limited access to the evidence or on recollection of the field. Treat it as a flag for an expert to check."}
   ],
   "tier": [
-    {
-      "value": 1,
-      "name": "Routine",
-      "definition": "Standard methods or values, consistent with established knowledge. Ordinary evidence is enough."
-    },
-    {
-      "value": 2,
-      "name": "Substantial",
-      "definition": "A new result within an established framework. Needs the evidence a careful paper in the field would show."
-    },
-    {
-      "value": 3,
-      "name": "Exceptional",
-      "definition": "Would change accepted understanding, or exceeds established benchmarks by a wide margin. Needs evidence strong enough to exclude ordinary explanations."
-    }
+    {"value": 1, "name": "Routine", "definition": "Standard methods or values, consistent with established knowledge. Ordinary evidence is enough."},
+    {"value": 2, "name": "Substantial", "definition": "A new result within an established framework. Needs the evidence a careful paper in the field would show."},
+    {"value": 3, "name": "Exceptional", "definition": "Would change accepted understanding, or exceeds established benchmarks by a wide margin. Needs evidence strong enough to exclude ordinary explanations."}
   ],
   "claim_type": [
-    {
-      "value": "observation",
-      "definition": "Something the paper reports seeing or measuring."
-    },
-    {
-      "value": "quantity",
-      "definition": "A numerical value, with or without an uncertainty, that the paper extracts or derives from data."
-    },
-    {
-      "value": "method",
-      "definition": "A statement about how something was done, or how well an instrument or procedure performs."
-    },
-    {
-      "value": "model",
-      "definition": "A result obtained from a model, derivation, calculation or simulation."
-    },
-    {
-      "value": "interpretation",
-      "definition": "What an observation, value or model result is said to mean, show or be caused by."
-    },
-    {
-      "value": "citation",
-      "definition": "A statement the paper takes from another work."
-    },
-    {
-      "value": "comparison",
-      "definition": "A statement that a result agrees with, exceeds or differs from another result, model or benchmark."
-    },
-    {
-      "value": "significance",
-      "definition": "A statement about the novelty, importance or implications of the work."
-    }
+    {"value": "observation", "definition": "Something the paper reports seeing or measuring."},
+    {"value": "quantity", "definition": "A numerical value, with or without an uncertainty, that the paper extracts or derives from data."},
+    {"value": "method", "definition": "A statement about how something was done, or how well an instrument or procedure performs."},
+    {"value": "model", "definition": "A result obtained from a model, derivation, calculation or simulation."},
+    {"value": "interpretation", "definition": "What an observation, value or model result is said to mean, show or be caused by."},
+    {"value": "citation", "definition": "A statement the paper takes from another work."},
+    {"value": "comparison", "definition": "A statement that a result agrees with, exceeds or differs from another result, model or benchmark."},
+    {"value": "significance", "definition": "A statement about the novelty, importance or implications of the work."}
   ],
   "access": [
-    {
-      "value": "full_text",
-      "definition": "The full text was opened and read in this run."
-    },
-    {
-      "value": "abstract",
-      "definition": "Only the abstract or a publisher summary was read in this run."
-    },
-    {
-      "value": "metadata",
-      "definition": "Only the bibliographic record was confirmed."
-    },
-    {
-      "value": "none",
-      "definition": "The source could not be reached."
-    }
+    {"value": "full_text", "definition": "The full text was opened and read in this run."},
+    {"value": "abstract", "definition": "Only the abstract or a publisher summary was read in this run."},
+    {"value": "metadata", "definition": "Only the bibliographic record was confirmed."},
+    {"value": "none", "definition": "The source could not be reached."}
   ],
   "citation_status": [
-    {
-      "value": "confirmed",
-      "definition": "The source was opened and supports the statement it is cited for."
-    },
-    {
-      "value": "corrected",
-      "definition": "The citation or the statement was wrong and has been fixed; the source as now cited supports the statement as now written."
-    },
-    {
-      "value": "removed",
-      "definition": "The citation was dropped from the review."
-    },
-    {
-      "value": "unverified",
-      "definition": "The source was not opened beyond its bibliographic record, or was not reached at all."
-    }
+    {"value": "confirmed", "definition": "The source was opened and supports the statement it is cited for."},
+    {"value": "corrected", "definition": "The citation or the statement was wrong and has been fixed; the source as now cited supports the statement as now written."},
+    {"value": "removed", "definition": "The citation was dropped from the review."},
+    {"value": "unverified", "definition": "The source was not opened beyond its bibliographic record, or was not reached at all."}
   ],
   "citation_error": [
-    {
-      "value": "misattributed",
-      "definition": "The source exists, but the authors, title, venue, year or identifier given for it were wrong."
-    },
-    {
-      "value": "unsupported",
-      "definition": "The source exists and was cited correctly, but does not say what the review attributed to it."
-    },
-    {
-      "value": "nonexistent",
-      "definition": "No such work could be found."
-    },
-    {
-      "value": "other",
-      "definition": "Another error, described in the note."
-    }
+    {"value": "misattributed", "definition": "The source exists, but the authors, title, venue, year or identifier given for it were wrong."},
+    {"value": "unsupported", "definition": "The source exists and was cited correctly, but does not say what the review attributed to it."},
+    {"value": "nonexistent", "definition": "No such work could be found."},
+    {"value": "other", "definition": "Another error, described in the note."}
   ],
   "citation_verdict": [
-    {
-      "value": "Supports",
-      "definition": "The source reports what the paper cites it for."
-    },
-    {
-      "value": "Supports in part",
-      "definition": "The source supports a narrower statement, or the same statement in a different system or regime."
-    },
-    {
-      "value": "Does not support",
-      "definition": "The source does not contain what the paper cites it for."
-    },
-    {
-      "value": "Contradicts",
-      "definition": "The source reports the opposite, or a null result, for what the paper cites it for."
-    },
-    {
-      "value": "Could not access",
-      "definition": "The source could not be read well enough to judge."
-    }
+    {"value": "Supports", "definition": "The source reports what the paper cites it for."},
+    {"value": "Supports in part", "definition": "The source supports a narrower statement, or the same statement in a different system or regime."},
+    {"value": "Does not support", "definition": "The source does not contain what the paper cites it for."},
+    {"value": "Contradicts", "definition": "The source reports the opposite, or a null result, for what the paper cites it for."},
+    {"value": "Could not access", "definition": "The source could not be read well enough to judge."}
   ],
   "verification": [
-    {
-      "value": "all",
-      "definition": "Every outside source the review relies on was opened and is confirmed or corrected."
-    },
-    {
-      "value": "partial",
-      "definition": "Some outside sources the review relies on remain unverified."
-    },
-    {
-      "value": "none",
-      "definition": "No outside source was verified, for example because the tool had no web access."
-    }
+    {"value": "all", "definition": "Every outside source the review relies on was opened and is confirmed or corrected."},
+    {"value": "partial", "definition": "Some outside sources the review relies on remain unverified."},
+    {"value": "none", "definition": "No outside source was verified, for example because the tool had no web access."}
   ],
-  "mode": [
-    {
-      "value": "standard",
-      "definition": "No specific concerns were given."
-    },
-    {
-      "value": "focused",
-      "definition": "The user gave specific concerns about the paper's content, which are recorded and answered explicitly."
-    }
-  ],
-  "intake": [
-    {
-      "value": "asked",
-      "definition": "The concerns question was asked and answered."
-    },
-    {
-      "value": "stated_in_request",
-      "definition": "The request already said whether there were concerns, so the question was not repeated."
-    },
-    {
-      "value": "not_interactive",
-      "definition": "The question could not be asked; the review ran as standard."
-    }
-  ],
-  "value_source": [
-    {
-      "value": "reported_by_tool",
-      "definition": "The value was shown to the model by the tool it ran in."
-    },
-    {
-      "value": "supplied_by_user",
-      "definition": "The value was given by the person running the review."
-    }
-  ],
-  "method_entry": [
-    {
-      "value": "skill",
-      "definition": "The review was run with the OpenPaperReviewer skill."
-    },
-    {
-      "value": "prompt",
-      "definition": "The review was run with one of the generic prompts."
-    }
-  ],
-  "review_status": [
-    {
-      "value": "active",
-      "definition": "The review stands as posted."
-    },
-    {
-      "value": "corrected",
-      "definition": "The review was changed after posting; its verification log says how."
-    },
-    {
-      "value": "withdrawn",
-      "definition": "The reviewer no longer stands behind the review."
-    }
-  ],
+  "mode": ["standard", "focused"],
+  "intake": ["asked", "stated_in_request", "not_interactive"],
+  "value_source": ["reported_by_tool", "supplied_by_user"],
+  "method_entry": ["skill", "prompt"],
+  "review_status": ["active", "corrected", "withdrawn"],
   "limits": {
     "claim_quote_words": 60,
     "citation_quote_words": 40,

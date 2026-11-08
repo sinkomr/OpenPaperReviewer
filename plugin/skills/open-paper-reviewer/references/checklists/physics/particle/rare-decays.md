@@ -9,17 +9,15 @@ version: "0.1"
 
 # Rare decays and lepton-flavour violation
 
-Searches for rare decays are used to claim a branching fraction (the fraction of decays of a particle into a given final state) for a process that is strongly suppressed in the Standard Model, or an upper limit on a process it forbids, such as charged lepton-flavour violation (LFV) in muon or tau decays and muon-to-electron conversion in nuclei. The result is a handful of events, or none, in a narrow signal window, turned into a branching fraction through a normalisation channel or a count of produced particles and an efficiency.
-
 ## 1. Normalisation channel and ratio of efficiencies
 
 **Question.** Which normalisation channel, or which count of produced or stopped particles, converts the signal yield into a branching fraction, and how similar are the signal and normalisation selections in trigger, topology and kinematics?
 
 **Why it matters.** Measuring relative to a well-known decay removes the need to know how many parent particles were produced, and with it the production cross section and luminosity, and lets selection effects common to both channels cancel. The cancellation is only as good as the similarity of the two channels: different triggers, numbers of tracks, particle identification or momentum spectra leave efficiency ratios that rest on simulation.
 
-**Resolved by.** The normalisation formula written out, with each factor and its uncertainty; a normalisation channel chosen to share the trigger and as much of the selection as possible; the residual efficiency differences evaluated with data-driven corrections; where two normalisation channels are available, the ratio of their yields compared with the known ratio of their branching fractions as a cross-check.
+**Resolved by.** The normalisation formula written out, with each factor and its uncertainty, and the single-event sensitivity given; a normalisation channel chosen to share the trigger and as much of the selection as possible; the residual efficiency differences evaluated with data-driven corrections; where two normalisation channels are available, the ratio of their yields compared with the known ratio of their branching fractions as a cross-check.
 
-**Benchmark.** [1]
+**Benchmark.** [1], [4]
 
 ## 2. External inputs to the normalisation
 
@@ -81,25 +79,14 @@ Searches for rare decays are used to claim a branching fraction (the fraction of
 
 **Benchmark.** [1], [4], [6], [7]
 
-## 8. Upper limit or significance from a few events
-
-**Question.** Which statistical procedure turns the observed count, the expected background and their uncertainties into the quoted upper limit, interval or significance, how do the systematic uncertainties enter it, and is the expected limit for no signal given alongside the observed one?
-
-**Why it matters.** With a handful of events or none, different procedures, frequentist or Bayesian, give different limits, and choosing between an upper limit and a two-sided interval after seeing the data gives intervals that cover less often than stated. When fewer events are observed than the background predicts, the limit can come out tighter than the experiment's sensitivity, so the observed limit alone can overstate what the experiment excludes.
-
-**Resolved by.** The procedure named, with its ordering rule or prior and the way background and efficiency uncertainties are included; the observed count, expected background and single-event sensitivity given so the limit can be recomputed; the expected limit or sensitivity quoted next to the observed limit; a procedure that passes from a limit to a two-sided interval by a rule set in advance, not by a choice made after the result is known.
-
-**Benchmark.** [3], [4], [8]
-
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | K.-F. Chen, T. Mombächer and U. De Sanctis, Analysis of B(s)0 → μ+μ− decays at the Large Hadron Collider, Symmetry 16, 251 (2024); read as arXiv:2402.09901 | doi:10.3390/sym16020251 | full text | Secs. 2.1, 3.1 and 4.1: branching fractions measured relative to a reference channel to avoid the production cross section and let selection systematics cancel; efficiencies cross-checked with the ratio of two normalisation channels; systematics dominated by the ratio of fragmentation fractions. Sec. 4.1: misidentified two-body hadronic decays peak close to the signal; misidentification rates from calibration decays; semileptonic and partially reconstructed backgrounds and a dedicated veto. Secs. 2.1 and 3.1: combinatorial background from mass sidebands with a linear or first-order shape; per-event mass resolution; mass resolution interpolated from charmonium and bottomonium; mass scale among the largest fit systematics. Secs. 1, 2.1, 3.1 and 3.2: efficiency corrected for the assumed lifetime, with 4 to 10% effects; classifier correlated with decay time; predictions include final-state radiation |
-| 2 | R. Aaij et al. (LHCb collaboration), A precise measurement of the fs/fd fragmentation-fraction ratio and of B0s decay branching fractions, Phys. Rev. D 104, 032005 (2021); read as arXiv:2103.06810 | doi:10.1103/PhysRevD.104.032005 | abstract | Abstract: the ratio of B0s to B0 production fractions is determined as a function of transverse momentum and centre-of-mass energy, and is used to update many B0s branching fractions, reducing a major systematic uncertainty |
-| 3 | K. Hayasaka et al. (Belle collaboration), Search for lepton flavor violating τ decays into three leptons with 719 million produced τ+τ− pairs, Phys. Lett. B 687, 139–143 (2010); read as arXiv:1001.3221 | doi:10.1016/j.physletb.2010.03.037 | full text | Sec. 4: number of produced tau pairs from integrated luminosity times the tau-pair cross section. Sec. 1: signal simulation assumes a phase-space distribution in the tau rest frame. Sec. 3: background in the blinded signal region interpolated from a sideband assuming a uniform distribution; no uncertainty assigned for the signal model. Sec. 4: upper limits from the Feldman–Cousins method, with the systematic uncertainty included through the POLE program |
-| 4 | L. Calibbi and G. Signorelli, Charged lepton flavour violation: an experimental and theoretical introduction, Riv. Nuovo Cimento 41, 71 (2018); read as arXiv:1709.00294 | doi:10.1393/ncr/i2018-10144-0 | full text | Sec. 8: single-event sensitivity as the inverse of the number of muons times efficiencies; 90% C.L. sensitivity about 2.3 times the single-event sensitivity; frequentist and Bayesian limits generally differ; signal box sized by the resolutions; resolution functions have long non-Gaussian tails. Sec. 9.2: muonic X-rays to monitor beam intensity. Sec. 13.1: accidental coincidences grow with the square of the beam rate and depend on resolutions; accidentals estimated from sidebands and radiative-decay background extrapolated from lower energies. Sec. 13.2: accidental overlays in three-electron searches quadratic or cubic in rate. Table 2 note and Sec. 4: conversion rates normalised to muon capture and calculated per nucleus |
-| 5 | B. M. Dassinger, Th. Feldmann, Th. Mannel and S. Turczyk, Model-independent analysis of lepton flavour violating tau decays, J. High Energy Phys. 10, 039 (2007); read as arXiv:0707.0988 | doi:10.1088/1126-6708/2007/10/039 | full text | Sec. 1: the decay distributions are needed to determine an experiment's efficiency and so to extract reliable limits. Secs. 3 and 4: different operator structures give different Dalitz distributions |
-| 6 | M. Bordone, G. Isidori and A. Pattori, On the Standard Model predictions for RK and RK*, Eur. Phys. J. C 76, 440 (2016); read as arXiv:1605.07633 | doi:10.1140/epjc/s10052-016-4274-7 | full text | Sec. 2: log-enhanced corrections from soft and collinear photon emission; Introduction and Sec. 3: corrections can reach about 10% in individual rates. Sec. 3 and Table 1: the size of the correction depends on the cut on the reconstructed B mass; experiments correct for it with simulation |
-| 7 | K. De Bruyn, R. Fleischer, R. Knegjens, P. Koppenburg, M. Merk and N. Tuning, Branching ratio measurements of Bs decays, Phys. Rev. D 86, 014027 (2012); read as arXiv:1204.1735 | doi:10.1103/PhysRevD.86.014027 | full text | Sec. II: the untagged time-integrated branching ratio averages the heavy and light eigenstates and differs from the one defined at zero decay time by up to about 10%. Sec. V: a decay-time-dependent selection biases the branching ratio, its correction needs assumed values of the width difference and decay parameters, the effect can be several per cent, and the measured effective lifetime should be used to tune the simulation. Abstract and Sec. VI: biases at the 10% level depending on the final state; recommends consistent definitions in particle listings |
-| 8 | G. J. Feldman and R. D. Cousins, A unified approach to the classical statistical analysis of small signals, Phys. Rev. D 57, 3873–3889 (1998); read as arXiv:physics/9711021 | doi:10.1103/PhysRevD.57.3873 | full text | Sec. III.1: choosing between an upper limit and a central interval after seeing the data (flip-flopping) undercovers. Secs. III.2 and IV.1: Poisson counts with known background, empty intervals, and an ordering rule that passes from limits to two-sided intervals by itself. Sec. VI: when fewer events than the expected background are observed, report the sensitivity (the average upper limit with no true signal) along with the limit |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | K.-F. Chen et al., Analysis of B(s)0 → μ+μ− decays at the Large Hadron Collider, Symmetry 16, 251 (2024); read as arXiv:2402.09901 | doi:10.3390/sym16020251 |
+| 2 | R. Aaij et al. (LHCb collaboration), A precise measurement of the fs/fd fragmentation-fraction ratio and of B0s decay branching fractions, Phys. Rev. D 104, 032005 (2021); read as arXiv:2103.06810 | doi:10.1103/PhysRevD.104.032005 |
+| 3 | K. Hayasaka et al. (Belle collaboration), Search for lepton flavor violating τ decays into three leptons with 719 million produced τ+τ− pairs, Phys. Lett. B 687, 139 (2010); read as arXiv:1001.3221 | doi:10.1016/j.physletb.2010.03.037 |
+| 4 | L. Calibbi and G. Signorelli, Charged lepton flavour violation: an experimental and theoretical introduction, Riv. Nuovo Cimento 41, 71 (2018); read as arXiv:1709.00294 | doi:10.1393/ncr/i2018-10144-0 |
+| 5 | B. M. Dassinger et al., Model-independent analysis of lepton flavour violating tau decays, J. High Energy Phys. 10, 039 (2007); read as arXiv:0707.0988 | doi:10.1088/1126-6708/2007/10/039 |
+| 6 | M. Bordone et al., On the Standard Model predictions for RK and RK*, Eur. Phys. J. C 76, 440 (2016); read as arXiv:1605.07633 | doi:10.1140/epjc/s10052-016-4274-7 |
+| 7 | K. De Bruyn et al., Branching ratio measurements of Bs decays, Phys. Rev. D 86, 014027 (2012); read as arXiv:1204.1735 | doi:10.1103/PhysRevD.86.014027 |

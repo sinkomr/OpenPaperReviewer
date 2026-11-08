@@ -17,7 +17,7 @@ Posted reviews live on the `reviews` branch, one folder per review.
 ### What is never posted
 
 - The paper itself, its figures, or long passages from it. Claims are quoted in a sentence or two; the validator enforces a limit.
-- `00_extraction.md`, which reproduces the paper's abstract and reference list.
+- `00_extraction.md`, which reproduces the paper's abstract.
 
 ### Steps
 
@@ -44,13 +44,7 @@ Open an issue with the "Author response" template. You can point out an error, s
 
 ## Checklist cards
 
-Cards live in `plugin/skills/open-paper-reviewer/references/checklists/`. The format and rules are in the [README there](plugin/skills/open-paper-reviewer/references/checklists/README.md). In short:
-
-- A card is a technique card (claims that rest on a technique) or a claim card (a kind of claim, whatever supports it). Core cards cover what applies to every paper.
-- Each item is a question a paper can answer well or badly, written in general terms. It does not describe or point at any particular paper.
-- Every benchmark source was opened by you, and the Sources table says where in the source the support is and what access you had.
-- Cards go in a folder for their field and subfield, such as `physics/condensed-matter/`. New fields get a new folder beside `physics/`, and every new folder gets a `README.md` whose heading is its title.
-- The index of cards has two levels: a top-level list of folders with the names of their cards, then one index per folder with each card's `applies_when` line. Physics is the only field so far. Once other fields are added, the index may need a third level: fields, then subfields, then cards.
+Cards live in `plugin/skills/open-paper-reviewer/references/checklists/`. The [README there](plugin/skills/open-paper-reviewer/references/checklists/README.md) sets out the kinds of card, the format, the rules and the folders; a new folder needs a row in its Folders table.
 
 Before opening a pull request:
 
@@ -70,7 +64,7 @@ The first checks the format. The second looks up each DOI and compares the recor
 
 ## Changing the method
 
-The method is the set of files under `plugin/skills/open-paper-reviewer/references/`: the rules, the rubric, the phase instructions and the templates. The prompts in `prompts/` and parts of `METHODOLOGY.md` are generated from them.
+The method is the set of files under `plugin/skills/open-paper-reviewer/references/`: the rules, the rubric, the phase instructions and the templates. The prompt in `prompts/`, the single-phase prompts attached to each release, and parts of `METHODOLOGY.md` are generated from them.
 
 1. Open an issue first for anything beyond a wording fix, saying what problem the change solves.
 2. Edit the files under `references/`. Keep phase files free of instructions specific to one tool; those belong in `SKILL.md`.

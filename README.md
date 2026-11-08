@@ -49,7 +49,7 @@ Then ask for a review, or invoke the skill directly with `$open-paper-reviewer`.
 
 ### In any other LLM
 
-Paste [`prompts/full-review-prompt.md`](prompts/full-review-prompt.md) into a new conversation and follow [`prompts/README.md`](prompts/README.md). It includes the core checklist cards and an index of the others, with links. For models with a small context there is a set of single-phase prompts in [`prompts/phase-prompts/`](prompts/phase-prompts/).
+Paste [`prompts/full-review-prompt.md`](prompts/full-review-prompt.md) into a new conversation and follow [`prompts/README.md`](prompts/README.md). It includes the core checklist cards and an index of the others, with links. For models with a small context, each [release](https://github.com/sinkomr/OpenPaperReviewer/releases/latest) has a set of single-phase prompts, `open-paper-reviewer-phase-prompts-<version>.zip`.
 
 ## Posted reviews
 
@@ -62,7 +62,7 @@ To post one, see [`CONTRIBUTING.md`](CONTRIBUTING.md). Authors of a reviewed pap
 - A review made with this method is an AI-assisted draft for a qualified person to check. It is not peer review.
 - The method is not yet calibrated on sound papers: how often it downgrades a claim that deserves to stand has not been measured. [`METHODOLOGY.md`](METHODOLOGY.md) records what is known.
 - A model's own citations are a known source of error. The method makes checking them a required phase, and every review reports which of its sources were confirmed and which were not. A review run without web access marks every source unverified.
-- Do not give a manuscript you received in confidence to an AI tool unless you are permitted to.
+- Do not give a manuscript you received in confidence to an AI tool unless you are permitted to. Many journals forbid it for manuscripts under review.
 - The method reviews papers, not people. It does not look up authors.
 
 ## What is in this repository

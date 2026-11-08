@@ -5,7 +5,7 @@ These prompts carry the OpenPaperReviewer method to any LLM. They are generated 
 | File | Use it when |
 |---|---|
 | `full-review-prompt.md` | Your model can take the whole method at once. It includes the core checklist cards and an index of the other cards by folder, with links. |
-| `phase-prompts/` | Your model's context is small, or you want to run and inspect one phase at a time. |
+| `phase-prompts/`, in `open-paper-reviewer-phase-prompts-<version>.zip` on each [release](https://github.com/sinkomr/OpenPaperReviewer/releases/latest) | Your model's context is small, or you want to run and inspect one phase at a time. |
 
 ## Running a full review
 
@@ -20,7 +20,7 @@ If your tool has no web access, the review still runs. Every outside source is m
 
 ## Running phase by phase
 
-Each file in `phase-prompts/` is a complete prompt for one phase and lists what to paste in with it. Run them in order, 00 to 07, each in a new conversation, saving the output of each as the files it names.
+Each file in `phase-prompts/` is a complete prompt for one phase, with only the parts of the rubric that phase uses, and lists what to paste in with it. Run them in order, 00 to 07, each in a new conversation, saving the output of each as the files it names.
 
 ## Checking the result
 

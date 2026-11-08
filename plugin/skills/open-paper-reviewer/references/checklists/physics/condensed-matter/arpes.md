@@ -9,8 +9,6 @@ version: "0.1"
 
 # Angle-resolved photoemission spectroscopy
 
-ARPES is used to claim band dispersions, Fermi surfaces, energy gaps, the surface, bulk or orbital character of states, and quasiparticle self-energies, from the kinetic energy and emission angle of photoelectrons. The measured intensity is the spectral function weighted by a matrix element and the Fermi function and broadened by resolution, and at ultraviolet photon energies it comes mostly from the top few atomic layers.
-
 ## 1. Energy reference and resolution
 
 **Question.** How was the Fermi level determined, what are the stated energy and angular resolutions, and how do they compare with the size of the gap, splitting or shift that is claimed?
@@ -81,23 +79,13 @@ ARPES is used to claim band dispersions, Fermi surfaces, energy gaps, the surfac
 
 **Benchmark.** [1], [2], [3]
 
-## 8. Surface ageing, reproducibility and reporting
-
-**Question.** Are the surface preparation, vacuum, temperature and time since preparation given, was the surface checked for change during the measurement, and was the result reproduced on another cleave or sample?
-
-**Why it matters.** Even in ultrahigh vacuum, residual gas covers a fresh surface within about a day, and adsorption, temperature cycling and beam exposure can shift and broaden peaks. A feature seen on one surface at one time may reflect the history of that surface.
-
-**Resolved by.** Preparation method and vacuum conditions; spectra repeated at the start and end of long acquisitions; results from more than one sample or cleave; and the conditions needed to repeat the measurement reported with the data: energy resolution, photon energy and polarization, geometry and sample orientation, sample temperature and facility.
-
-**Benchmark.** [1], [2]
-
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | H. Zhang, T. Pincelli, C. Jozwiak, T. Kondo, R. Ernstorfer, T. Sato and S. Zhou, Angle-resolved photoemission spectroscopy, Nat. Rev. Methods Primers 2, 54 (2022); read as preprint arXiv:2207.06942 | doi:10.1038/s43586-022-00133-7 | full text | Preprint sections "Sample" (vary flux to test for charging), "Fermi energy calibration" (reference before and after), "Energy, momentum and time resolution", "Angle-to-momentum conversion" (inner potential is a fitted parameter), "Important band parameters and self-energy analysis" (bare velocity hard to determine), "Dipole matrix element effect" (band suppression; vary photon energy, polarization, zone), "Statistical analysis and errors", "Issues with reproducibility", "Repositories and data deposition" (distribution curves needed for gap claims), "Minimum reporting standards", "kz broadening" and "Space charge" |
-| 2 | J. A. Sobota, Y. He and Z.-X. Shen, Angle-resolved photoemission studies of quantum materials, Rev. Mod. Phys. 93, 025006 (2021); read as preprint arXiv:2008.02378, which carries a different title | doi:10.1103/RevModPhys.93.025006 | full text | Sec. II, subsections on final states and out-of-plane momentum (photon-energy dependence separates surface from bulk states; free-electron final state can fail), on surface sensitivity and resolution (signal from the top few layers; out-of-plane broadening; space charge) and on matrix elements (dichroism caveats). Sec. III, subsections on data analysis (Fermi reference, detector non-linearity, gap extraction and symmetrization, unknown bare band, filtered images not quantitative) and on sample environment (monolayer coverage in about a day) |
-| 3 | A. Damascelli, Probing the Electronic Structure of Complex Systems by ARPES, Phys. Scr. T109, 61–74 (2004); read as preprint arXiv:cond-mat/0307085, which carries a slightly different title | doi:10.1238/Physica.Topical.109a00061 | full text | Sec. V: the matrix element depends on photon energy and geometry and can suppress intensity completely; resolution and background must enter quantitative analysis. Sec. VI: surface sensitivity means spectra may not represent the bulk, and the surface should be characterized structurally and chemically |
-| 4 | V. N. Strocov, Intrinsic accuracy in 3-dimensional photoemission band mapping, J. Electron Spectrosc. Relat. Phenom. 130, 65–78 (2003); read as preprint arXiv:cond-mat/0210404 | doi:10.1016/S0368-2048(03)00054-9 | full text | Secs. I and V: final-state damping gives an intrinsic out-of-plane broadening, so peaks are averages that can be shifted from the true dispersion. Sec. III, subsections on ghost peaks at the Fermi level and on line widths near it |
-| 5 | P. Zhang, P. Richard, T. Qian, Y.-M. Xu, X. Dai and H. Ding, A precise method for visualizing dispersive features in image plots, Rev. Sci. Instrum. 82, 043712 (2011); read as preprint arXiv:1104.1524 | doi:10.1063/1.3585113 | full text | Secs. I and II with Fig. 1: second-derivative maxima are displaced from true peak positions for asymmetric line shapes, and the Fermi cut-off appears as a feature. Sec. IV: these methods serve visualization only, line-shape information is lost, and the curvature method has free parameters |
-| 6 | X. J. Zhou, B. Wannberg, W. L. Yang, V. Brouet, Z. Sun, J. F. Douglas, D. Dessau, Z. Hussain and Z.-X. Shen, Space charge effect and mirror charge effect in photoemission spectroscopy, J. Electron Spectrosc. Relat. Phenom. 142, 27–38 (2005); read as preprint arXiv:cond-mat/0410006 | doi:10.1016/j.elspec.2004.08.004 | full text | Abstract and Sec. V: Coulomb effects shift and broaden spectra by about 10 meV at a third-generation synchrotron, scale with photon flux, and differ between sample and reference metal, which undermines the Fermi-level reference |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | H. Zhang et al., Angle-resolved photoemission spectroscopy, Nat. Rev. Methods Primers 2, 54 (2022); read as preprint arXiv:2207.06942 | doi:10.1038/s43586-022-00133-7 |
+| 2 | J. A. Sobota et al., Angle-resolved photoemission studies of quantum materials, Rev. Mod. Phys. 93, 025006 (2021); read as preprint arXiv:2008.02378, which carries a different title | doi:10.1103/RevModPhys.93.025006 |
+| 3 | A. Damascelli, Probing the Electronic Structure of Complex Systems by ARPES, Phys. Scr. T109, 61 (2004); read as preprint arXiv:cond-mat/0307085, which carries a slightly different title | doi:10.1238/Physica.Topical.109a00061 |
+| 4 | V. N. Strocov, Intrinsic accuracy in 3-dimensional photoemission band mapping, J. Electron Spectrosc. Relat. Phenom. 130, 65 (2003); read as preprint arXiv:cond-mat/0210404 | doi:10.1016/S0368-2048(03)00054-9 |
+| 5 | P. Zhang et al., A precise method for visualizing dispersive features in image plots, Rev. Sci. Instrum. 82, 043712 (2011); read as preprint arXiv:1104.1524 | doi:10.1063/1.3585113 |
+| 6 | X. J. Zhou et al., Space charge effect and mirror charge effect in photoemission spectroscopy, J. Electron Spectrosc. Relat. Phenom. 142, 27 (2005); read as preprint arXiv:cond-mat/0410006 | doi:10.1016/j.elspec.2004.08.004 |

@@ -4,21 +4,24 @@
 Usage:
     make_release_zip.py
 
-Writes two files to dist/:
+Writes three files to dist/:
 
 - open-paper-reviewer-plugin-<version>.zip: the plugin folder, for plugin
   uploads (claude.ai and Cowork plugin upload, OpenAI's plugin portal).
 - open-paper-reviewer-skill-<version>.zip: the skill alone, for skill uploads.
   It holds one top-level folder, open-paper-reviewer/, with SKILL.md directly
   inside it, a copy of the licence, and no plugin manifest.
+- open-paper-reviewer-phase-prompts-<version>.zip: the eight single-phase
+  prompts for other LLMs, built by scripts/build_prompts.py.
 
-The regression cases (evals/), caches and system files are left out of both:
-they are for developing the skill, not for using it.
+The regression cases (evals/), caches and system files are left out of the
+plugin and skill zips: they are for developing the skill, not for using it.
 
 Standard library only.
 """
 from __future__ import annotations
 
+import importlib.util
 import json
 import zipfile
 from pathlib import Path
@@ -65,10 +68,22 @@ def build_skill_zip(target):
     return count
 
 
+def build_phase_prompts_zip(target):
+    spec = importlib.util.spec_from_file_location("build_prompts", ROOT / "scripts" / "build_prompts.py")
+    builder = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(builder)
+    prompts = builder.phase_prompts()
+    with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as archive:
+        for name, text in prompts.items():
+            archive.writestr(f"phase-prompts/{name}", text)
+        archive.write(ROOT / "prompts" / "README.md", "phase-prompts/README.md")
+    return len(prompts) + 1
+
+
 def main():
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
-    for kind, build in (("plugin", build_plugin_zip), ("skill", build_skill_zip)):
+    for kind, build in (("plugin", build_plugin_zip), ("skill", build_skill_zip), ("phase-prompts", build_phase_prompts_zip)):
         target = dist / f"{SKILL_NAME}-{kind}-{version()}.zip"
         count = build(target)
         print(f"wrote {target.relative_to(ROOT)}: {count} files, {target.stat().st_size // 1024} KiB")

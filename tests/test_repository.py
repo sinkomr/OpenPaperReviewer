@@ -96,6 +96,13 @@ class Packaging(unittest.TestCase):
             self.assertIn("open-paper-reviewer/SKILL.md", skill_names)
             self.assertIn("open-paper-reviewer/LICENSE", skill_names)
             self.assertFalse([n for n in skill_names if "plugin.json" in n or ".claude-plugin" in n or ".codex-plugin" in n])
+            # The single-phase prompts are not in the repository; each release carries them.
+            prompts_zip = Path(tmp) / "phase-prompts.zip"
+            builder.build_phase_prompts_zip(prompts_zip)
+            with zipfile.ZipFile(prompts_zip) as archive:
+                prompt_names = sorted(archive.namelist())
+            phases = sorted(path.name for path in (REFERENCES / "phases").glob("*.md"))
+            self.assertEqual(prompt_names, sorted([f"phase-prompts/{name}" for name in phases] + ["phase-prompts/README.md"]))
 
     def test_every_file_the_skill_names_exists(self):
         for relative in re.findall(r"`((?:references|scripts)/[\w./<>-]+)`", self.skill_text):
@@ -144,6 +151,39 @@ class MethodConsistency(unittest.TestCase):
     def test_generated_files_are_up_to_date(self):
         result = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_prompts.py"), "--check"], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_each_phase_prompt_carries_the_rubric_its_phase_uses(self):
+        builder = load(ROOT / "scripts" / "build_prompts.py")
+        self.assertEqual(sorted(builder.PHASE_RUBRIC), [name[:2] for name in self.phases])
+        self.assertEqual(builder.PHASE_RUBRIC["07"], list(builder.LABELS))
+        for keys in builder.PHASE_RUBRIC.values():
+            self.assertTrue(set(keys) <= set(builder.LABELS) <= set(self.rubric))
+        # Words that show a phase, or a template it uses, needs a part of the rubric.
+        signs = {
+            "verdict": r"Partially Supported|\bUnsupported\b|\bContradicted\b|Cannot Evaluate",
+            "severity": r"\bCritical\b|\bCosmetic\b",
+            "confidence": r"(?i)\bconfidence\b",
+            "tier": r"(?i)\btier\b",
+            "claim_type": r"(?i)claim type|claim of interpretation|observation \| quantity",
+            "access": r"full_text|(?i:access level)|metadata only",
+            "citation_status": r"\bunverified\b|\bconfirmed\b",
+            "citation_error": r"misattributed|nonexistent",
+            "citation_verdict": r"Supports in part|Does not support|Could not access|(?i:citation verdict)",
+            "verification": r"(?i)citation[- _]verification",
+        }
+        for name, text in self.phases.items():
+            number = name[:2]
+            used = set(builder.templates_named_in(text, self.templates))
+            if number == "03":
+                text += self.phases["04-reference-deep-dives.md"]
+                used |= set(builder.templates_named_in(text, self.templates))
+            if number == "07":
+                used.add("run-record")
+            text += "".join(self.templates[template] for template in used)
+            for key, sign in signs.items():
+                if re.search(sign, text):
+                    with self.subTest(phase=number, rubric=key):
+                        self.assertIn(key, builder.PHASE_RUBRIC[number])
 
 
 class ReviewPullRequests(unittest.TestCase):

@@ -56,13 +56,13 @@ Field notes:
 
 - **method.entry** is `skill` or `prompt`. **method.modified** is true if the instructions were changed in any way; `prompt.md` must then contain the full changed text. **method.commit** is the repository commit if known, otherwise null.
 - **paper.identifier** is `doi:…`, `arXiv:…` or a URL. **paper.version** is the version reviewed: an arXiv version, "published version", or the date on a draft. **paper.public** says whether anyone can obtain the paper.
-- **review.mode** is `standard` or `focused`. **review.concerns** holds the concerns as given, verbatim; it is empty for a standard review. **review.intake** is `asked`, `stated_in_request` or `not_interactive`.
+- **review.mode** is `standard` or `focused`. **review.concerns** holds the concerns as given, verbatim; it is empty for a standard review. **review.intake** is `asked`, `stated_in_request` (the request already said standard review or listed concerns) or `not_interactive` (the question could not be asked; the review is standard). **review.status** is `active`; `corrected` and `withdrawn` are set after posting, as `CONTRIBUTING.md` describes.
 - **review.citation_verification** is `all`, `partial` or `none`, set in Phase 7 from the citations table.
-- **tool.version** is the version the tool reports, or the one the person running the review gives. If neither is available, write `unknown`. The validator warns about an unknown tool version but accepts it.
+- **tool.version** is the version the tool reports, or the one the person running the review gives. Some tools do not show it, and a command that prints it may need approval you cannot get. If neither is available, write `unknown`. The validator warns about an unknown tool version but accepts it.
 - **models** has one entry for each model that did any of the work, and together they must cover phases 0 to 7.
-  - `id` is the exact identifier. `effort` is the reasoning-effort or thinking setting as the tool shows it. If the tool has no such setting, write `none exposed`.
+  - `id` is the exact identifier and `effort` the reasoning-effort or thinking setting, as the tool shows them. If the tool has no such setting, write `none exposed`. Where the request states either, use that.
   - `id_source` and `effort_source` are `reported_by_tool` when the tool showed the value to the model, and `supplied_by_user` when the person running the review gave it.
-  - Never fill these in from the model's own impression of what it is. If the tool does not show a value, ask the person running the review.
+  - Never fill these in from the model's own impression of what it is: models are often wrong about it, and a wrong record makes reviews impossible to compare. If neither the tool nor the request gives a value, ask the person running the review. If you cannot ask, write `unknown`; the validator reports the record as incomplete until someone fills it in.
 - **reviewer**, **human_check** and **conflicts_of_interest** are needed to post a review. `human_check` says what a person actually checked. "none" is an acceptable answer; an invented one is not.
 
 ## prompt.md

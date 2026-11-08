@@ -18,17 +18,19 @@
 
 ## Checklist close-out
 
-Every item from Phase 1 gets a row, so nothing on the list goes unanswered.
+Every item from Phase 1 gets a row, so nothing on the list goes unanswered. Name what each item checks in three to six words; the full question stays in the Phase 1 checklist.
 
 ```markdown
 ## Checklist close-out
 
-| Item | Question | Answer | Where addressed |
+| Item | What it checks | Answer | Where addressed |
 |---|---|---|---|
-| P-1 | … | complies \| departs \| not enough detail to tell \| not applicable | claim A-02; Topic 3 |
+| P-1 | Scatter against measurement noise | complies \| departs \| not enough detail to tell \| not applicable | claim A-02; Topic 3 |
 ```
 
 ## Effect on verdicts
+
+List only verdicts that changed, or write "No verdict changed."
 
 ```markdown
 ## Effect on verdicts

@@ -53,6 +53,6 @@ Whether the strength of the evidence matches how much a claim asks the reader to
 
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | J. P. A. Ioannidis, Why most published research findings are false, PLoS Medicine 2(8), e124 (2005) | doi:10.1371/journal.pmed.0020124 | full text | Section "Modeling the Framework for False Positive Findings": the probability that a claimed finding is true rises with the pre-study odds and the statistical power, and falls as bias increases |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | J. P. A. Ioannidis, Why most published research findings are false, PLoS Medicine 2(8), e124 (2005) | doi:10.1371/journal.pmed.0020124 |

@@ -9,18 +9,15 @@ Decide the review mode before reading the paper in depth.
 - If the request already says to do a standard review, or already lists concerns about the paper, use that and do not ask again.
 - Otherwise ask the user this one question, then stop and wait for the answer: "Before I start: do you have specific concerns about this paper that should get closer scrutiny, or would you like a standard review?"
 - If you have been told that the run is automated or that you must not ask questions, proceed as a standard review and record that the question could not be asked.
+- If you are unsure whether anyone can answer, ask and stop. The user can reply in the next message.
 
-A review with concerns is a focused review; one without is a standard review. Both run every phase in full. Concerns decide where the review looks hardest. They are not evidence, and they do not change the standard a claim has to meet.
+A review with concerns is a focused review; one without is a standard review. Both run every phase in full. Concerns decide where the review looks hardest.
 
 Restate each concern as a question that can be answered from the paper's content, for example "Is the sample large enough to support the subgroup result?" Keep the user's own words as well; both go in the record. If a concern is about the authors and not the paper (their reputation, motives or record), explain that this method reviews content only, and ask for it to be put as a question about the paper or dropped.
 
 ## Run record
 
-Start `run.json` and `prompt.md` now, following the `run-record` template. You will complete them in Phase 7.
-
-- Put the request and the intake exchange into `prompt.md`, verbatim.
-- Record the model name and identifier and the reasoning-effort setting exactly as your tool reports them. If your tool does not show you one of these, ask the user for it and record that the user supplied it. Do not work out your own model or effort from general knowledge. Models are often wrong about this, and a wrong record makes the review impossible to compare with others.
-- Record the tool name and version, whether you have web access, and the date. If the tool does not show its version and nobody can tell you, write `unknown`.
+Start `run.json` and `prompt.md` now, following the `run-record` template, and complete them in Phase 7. Put the request and the intake exchange into `prompt.md`, verbatim. Record the model, effort, tool, web access and date as the template's field notes say.
 
 ## Extraction
 
@@ -33,10 +30,9 @@ Read the whole paper: text, captions, footnotes, methods, appendices and any sup
 5. **Methods summary.** Samples or subjects, instruments and settings, procedures, sample sizes, statistics, and every data-processing step described. Record what is stated and note what is left unstated. Do not fill gaps with assumptions.
 6. **Supplementary material.** What was supplied, and every supplementary item the main text refers to that you do not have.
 7. **Data and code availability**, as the paper states it.
-8. **Reference list**, numbered as in the paper.
-9. **Headline claims.** The five to fifteen claims that the title, abstract and conclusions depend on, each with its location and a tier from the rubric.
-10. **Open questions.** Things a careful reader would want checked: a number given without an uncertainty, a conclusion with no figure behind it, values that disagree between sections, placeholders, a control that seems to be missing, a reference that looks incomplete. Number them Q-1, Q-2, … and write them as questions, not findings.
-11. **Summary.** At most 150 words, in plain language, of what the paper says it shows.
+8. **Headline claims.** The five to fifteen claims that the title, abstract and conclusions depend on, each with its location and a tier from the rubric.
+9. **Open questions.** Things a careful reader would want checked: a number given without an uncertainty, a conclusion with no figure behind it, values that disagree between sections, placeholders, a control that seems to be missing, a reference that looks incomplete. Number them Q-1, Q-2, … and write them as questions, not findings.
+10. **Summary.** At most 150 words, in plain language, of what the paper says it shows.
 
 ## Supplementary-material check
 

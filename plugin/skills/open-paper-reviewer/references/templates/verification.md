@@ -10,13 +10,13 @@ Web access: yes | no
 
 ## 1. Sources
 
+List only sources whose result is error or could not open; `citations.json` holds the rest.
+
 | Citation id | Source | Access reached | Result | Error type | Decision |
 |---|---|---|---|---|---|
-| C-001 | short citation | full text | valid | none | none |
 | C-002 | short citation | abstract | error | unsupported | redo A-04 literature check |
 
-Result is valid, error or could not open. Error type is misattributed, unsupported, nonexistent or other.
-Decision for an error is one of: patch in place (a correct source exists and the argument survives); redo the analysis that depended on it; drop the statement.
+Valid: C-001, … (n sources).
 
 ## 2. Numbers
 
@@ -32,8 +32,6 @@ Which claim texts and quotations were compared with the paper (all, or which sam
 Any claim whose verdict, severity or confidence differed between its scrutiny block, the synthesis table and `claims.json`.
 
 ## 5. Defence pass
-
-For each Critical or Major finding: the strongest reply the authors could make from the paper itself, and whether the review already answers it.
 
 | Finding | Strongest reply for the authors | Answered in the review? | Action |
 |---|---|---|---|

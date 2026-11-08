@@ -31,19 +31,9 @@ Whether a reader could check the work.
 
 **Benchmark.** [2]
 
-## 3. Supplementary material the text relies on
-
-**Question.** Is every supplementary item that the main text cites as evidence actually accessible with the paper?
-
-**Why it matters.** A claim whose evidence sits in material the reader cannot obtain cannot be evaluated.
-
-**Resolved by.** Every cited supplementary figure, table and dataset present and matching its description in the text.
-
-**Benchmark.** None needed: this can be checked directly.
-
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | M. D. Wilkinson, M. Dumontier, I. J. Aalbersberg et al., The FAIR Guiding Principles for scientific data management and stewardship, Scientific Data 3, 160018 (2016) | doi:10.1038/sdata.2016.18 | full text | Section "Supporting discovery through good data management": research objects should be findable, accessible, interoperable and reusable, by people and by machines |
-| 2 | M. R. Munafò, B. A. Nosek, D. V. M. Bishop et al., A manifesto for reproducible science, Nature Human Behaviour 1, 0021 (2017) | doi:10.1038/s41562-016-0021 | full text | Box "Data sharing": public sharing of data supports accountability and allows reanalyses that detect mistakes. Summary table: open data, materials and software listed among the measures proposed |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | M. D. Wilkinson et al., The FAIR Guiding Principles for scientific data management and stewardship, Scientific Data 3, 160018 (2016) | doi:10.1038/sdata.2016.18 |
+| 2 | M. R. Munafò et al., A manifesto for reproducible science, Nature Human Behaviour 1, 0021 (2017) | doi:10.1038/s41562-016-0021 |

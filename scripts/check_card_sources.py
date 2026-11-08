@@ -4,7 +4,7 @@
 Usage:
     check_card_sources.py [card.md ...] [--strict]
 
-With no arguments, checks every card. For each row of a card's Sources table
+With no arguments, checks every card. For each source a card lists
 that has a DOI, looks the record up (Crossref, then the DOI resolver for DOIs
 that Crossref does not hold) and compares the first author and year with the
 reference text. For URL identifiers, checks only that the URL answers.
@@ -30,24 +30,24 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "plugin" / "skills" / "open-paper-reviewer"
-CARDS = SKILL / "references" / "checklists"
 
-_spec = importlib.util.spec_from_file_location("verify_citations", SKILL / "scripts" / "verify_citations.py")
-verify = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(verify)
+def load(name, path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+verify = load("verify_citations", SKILL / "scripts" / "verify_citations.py")
+card_checker = load("check_card", ROOT / "scripts" / "check_card.py")
 
 
 def rows(path):
-    in_sources = False
-    for line in path.read_text(encoding="utf-8").splitlines():
-        if line.startswith("## "):
-            in_sources = line.strip() == "## Sources"
-            continue
-        if not in_sources:
-            continue
-        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
-        if len(cells) >= 5 and cells[0].isdigit():
-            yield int(cells[0]), cells[1], cells[2], cells[3]
+    """Each source of a card: number, reference, identifier, and the access recorded in card-sources/."""
+    _, _, sources = card_checker.parse(path)
+    notes = card_checker.parse_notes(card_checker.notes_path(path)) or {}
+    for number, source in sources.items():
+        yield number, source["reference"], source["identifier"], notes.get(number, {}).get("access", "access not recorded")
 
 
 def doi_resolves(doi, timeout):
@@ -92,7 +92,7 @@ def main():
     parser.add_argument("--timeout", type=float, default=20.0)
     args = parser.parse_args()
 
-    paths = [Path(card) for card in args.cards] or sorted(p for p in CARDS.rglob("*.md") if p.name != "README.md")
+    paths = [Path(card) for card in args.cards] or card_checker.card_files()
     bad, total, cache = 0, 0, {}
     for path in paths:
         print(path.relative_to(ROOT) if path.is_absolute() and ROOT in path.parents else path)

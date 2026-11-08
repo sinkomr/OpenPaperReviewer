@@ -43,7 +43,7 @@ Whether the design can tell the claimed effect apart from everything else that c
 
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | N. Percie du Sert, V. Hurst, A. Ahluwalia et al., The ARRIVE guidelines 2.0: Updated guidelines for reporting animal research, PLoS Biology 18(7), e3000410 (2020) | doi:10.1371/journal.pbio.3000410 | full text | Table "ARRIVE Essential 10": item 1 asks for the groups compared, including controls, or the reason none was used; items 4 and 5 ask whether randomisation and blinding were used and how |
-| 2 | M. R. Munafò, B. A. Nosek, D. V. M. Bishop et al., A manifesto for reproducible science, Nature Human Behaviour 1, 0021 (2017) | doi:10.1038/s41562-016-0021 | full text | Section "Methods": blinding of participants, data collectors and analysts is given as a remedy for self-deception and unwanted bias |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | N. Percie du Sert et al., The ARRIVE guidelines 2.0: Updated guidelines for reporting animal research, PLoS Biology 18(7), e3000410 (2020) | doi:10.1371/journal.pbio.3000410 |
+| 2 | M. R. Munafò et al., A manifesto for reproducible science, Nature Human Behaviour 1, 0021 (2017) | doi:10.1038/s41562-016-0021 |

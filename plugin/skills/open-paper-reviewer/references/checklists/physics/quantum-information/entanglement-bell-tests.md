@@ -9,8 +9,6 @@ version: "0.1"
 
 # Entanglement and Bell tests
 
-Entanglement witnesses, entanglement measures and Bell tests are used to claim that a prepared state is entangled, how strongly or among how many parties, and that measured correlations cannot be explained by any local hidden-variable (LHV) model. A Bell test compares correlations with a bound such as that of the Clauser-Horne-Shimony-Holt (CHSH) inequality, and its conclusion holds only as far as the experiment closes the detection, locality and freedom-of-choice loopholes.
-
 ## 1. What the test certifies and under which assumptions
 
 **Question.** Does the paper say which conclusion its data support (entanglement assuming trusted, well-characterised measurements, violation of local realism, or a device-independent result), and does it list every assumption that conclusion needs beyond those of the test itself?
@@ -59,7 +57,7 @@ Entanglement witnesses, entanglement measures and Bell tests are used to claim t
 
 **Resolved by.** A hypothesis test with a stated significance level, such as a martingale or binomial bound that holds for local models with memory; the number of trials stated; any assumption of independent trials stated.
 
-**Benchmark.** [2], [7]
+**Benchmark.** [2], [6]
 
 ## 6. Measurement settings behind a witness
 
@@ -71,17 +69,7 @@ Entanglement witnesses, entanglement measures and Bell tests are used to claim t
 
 **Benchmark.** [4], [5]
 
-## 7. Entanglement from a reconstructed state
-
-**Question.** When fidelity, negativity or another measure is computed from a state reconstructed by tomography, which estimator was used, and are the uncertainties and entanglement bounds valid given the bias of that estimator?
-
-**Why it matters.** Reconstructions that force a physical density matrix, such as maximum likelihood or least squares, are biased: they tend to underestimate fidelity and overestimate entanglement, most at low counts and for many qubits, and can show entanglement for a separable state. Bootstrapped error bars around such estimates inherit the bias and often fail to cover the true value.
-
-**Resolved by.** Linear quantities such as fidelity evaluated directly from the data; nonlinear measures given as lower bounds with one-sided confidence regions, using a bounding operator chosen independently of the data; the estimator, counts per setting and error method stated; for larger systems, a witness that needs fewer measurements than full tomography.
-
-**Benchmark.** [4], [6]
-
-## 8. Multipartite and quantitative claims
+## 7. Multipartite and quantitative claims
 
 **Question.** For a claim about many parties, a high dimension or an amount of entanglement, does the criterion used certify that specific property, such as genuine multipartite entanglement, entanglement depth or Schmidt number, and is any quantity reported as a bound rather than an exact value?
 
@@ -93,12 +81,11 @@ Entanglement witnesses, entanglement measures and Bell tests are used to claim t
 
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | N. Brunner, D. Cavalcanti, S. Pironio, V. Scarani and S. Wehner, Bell nonlocality, Rev. Mod. Phys. 86, 419 (2014); read as preprint arXiv:1303.2849 | doi:10.1103/RevModPhys.86.419 | full text | Secs. I.1 and I.2 (preprint numbering): locality defined through space-like separated events, with settings assumed independent of the hidden variable; a Bell violation acts as an entanglement detector robust to experimental imperfection. Sec. III.1.1: some entangled (Werner) states admit a local model. Sec. III.3.1: post-selection is to be treated as a nonlocal resource, linked to the detection loophole. Sec. IV.3.3, footnote 16: for device-independent randomness, isolation such as shielding can stand in for space-like separation. Sec. IV.3.4: device-independent key distribution needs a genuine violation, meaning the detection loophole closed |
-| 2 | J.-Å. Larsson, Loopholes in Bell inequality tests of local realism, J. Phys. A: Math. Theor. 47, 424003 (2014); read as preprint arXiv:1407.0363 | doi:10.1088/1751-8113/47/42/424003 | full text | Sec. 1.4: subtracting accidentals opens a loophole and should be avoided. Sec. 1.5: finite samples need a proper hypothesis test. Secs. 2.1 to 2.3: fast switching, unpredictable settings, memory between runs handled by a supermartingale bound, active choices space-like separated from emission. Secs. 3.1 to 3.4: fair sampling differs from constant efficiency; thresholds of about 82.8 percent for CHSH and 2/3 for Clauser-Horne with non-maximally entangled states; event-ready setups. Secs. 3.5 to 3.7: coincidence loophole and bounds; post-selection built into some interferometers allows a local model. Sec. 4: state all extra assumptions and report whole-setup efficiency; loophole-free tests matter for device-independent cryptography |
-| 3 | O. Gühne and G. Tóth, Entanglement detection, Phys. Rep. 474, 1–75 (2009); read as preprint arXiv:0811.2803 | doi:10.1016/j.physrep.2009.02.004 | full text | Sec. 3.3 (preprint numbering): full separability, m-separability and genuine N-partite entanglement defined; a product of entangled pairs is entangled but not genuinely N-partite entangled. Sec. 3.6.2: witnesses of the form one half minus the GHZ or graph-state projector, so fidelity above 1/2 certifies genuine multipartite entanglement; Secs. 3.1.2 and 3.6.1: a different threshold, 3/4, certifies three-qubit GHZ-class entanglement. Sec. 5.1.2: a violation implies entanglement, but some entangled states violate no Bell inequality, so Bell inequalities are non-optimal witnesses |
-| 4 | N. Friis, G. Vitagliano, M. Malik and M. Huber, Entanglement certification from theory to experiment, Nat. Rev. Phys. 1, 72–87 (2018); read as preprint arXiv:1906.10929 | doi:10.1038/s42254-018-0003-5 | full text | Introduction: which methods apply depends on the assumptions made about states and measurements; estimation is distinguished from certification. Entanglement quantification and bounding witnessed entanglement: computing most measures is hard even with the full density matrix, so lower bounds from a few expectation values are used. Statistical error and finite data: tomography scales poorly; ignoring errors in reconstruction can overestimate entanglement and underestimate fidelity; confidence bounds such as Hoeffding's. Multipartite and high-dimensional sections: genuine multipartite entanglement, entanglement depth and Schmidt-number witnesses |
-| 5 | D. Rosset, R. Ferretti-Schöbitz, J.-D. Bancal, N. Gisin and Y.-C. Liang, Imperfect measurement settings: implications for quantum state tomography and entanglement witnesses, Phys. Rev. A 86, 062325 (2012); read as preprint arXiv:1203.0911 | doi:10.1103/PhysRevA.86.062325 | full text | Secs. IV.1 to IV.3: with misaligned bases a two-qubit witness certifies a separable state as entangled for any non-zero misalignment; GHZ-type witnesses show similar errors that depend on the number of qubits times the misalignment; a witness shifted by a misalignment-dependent term stays valid. Sec. III: misalignment of a few degrees lowers tomographic fidelity at first order |
-| 6 | C. Schwemmer, L. Knips, D. Richart, T. Moroder, M. Kleinmann, O. Gühne and H. Weinfurter, Systematic errors in current quantum state tomography tools, Phys. Rev. Lett. 114, 080403 (2015); read as preprint arXiv:1310.8465 | doi:10.1103/PhysRevLett.114.080403 | full text | Abstract and Figs. 1 to 3: maximum-likelihood and least-squares reconstructions underestimate fidelity, more so at low counts and for more qubits; any method that always returns a physical state is biased. Fig. 4: they overestimate negativity and can show entanglement for a separable state. Bootstrap appendix: bootstrapped error bars inherit the bias and often miss the true value. Proposed method: linear evaluation and linearised bounds with Hoeffding confidence regions, operator chosen independently of the data |
-| 7 | D. Elkouss and S. Wehner, (Nearly) optimal P values for all Bell inequalities, npj Quantum Inf. 2, 16026 (2016); read as preprint arXiv:1510.07233 | doi:10.1038/npjqi.2016.26 | full text | Sec. I (preprint numbering): counting standard deviations from the best local model assumes Gaussian statistics and independent attempts, leaving the memory loophole open; the p-value is the largest probability of data at least as extreme under any local model. Sec. III.1.2: a binomial bound valid for local models with arbitrary memory. Sec. III.2: a general bound from a supermartingale argument. Sec. IV.1: the number of trials must not depend on the data |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | N. Brunner et al., Bell nonlocality, Rev. Mod. Phys. 86, 419 (2014); read as preprint arXiv:1303.2849 | doi:10.1103/RevModPhys.86.419 |
+| 2 | J.-Å. Larsson, Loopholes in Bell inequality tests of local realism, J. Phys. A: Math. Theor. 47, 424003 (2014); read as preprint arXiv:1407.0363 | doi:10.1088/1751-8113/47/42/424003 |
+| 3 | O. Gühne and G. Tóth, Entanglement detection, Phys. Rep. 474, 1 (2009); read as preprint arXiv:0811.2803 | doi:10.1016/j.physrep.2009.02.004 |
+| 4 | N. Friis et al., Entanglement certification from theory to experiment, Nat. Rev. Phys. 1, 72 (2018); read as preprint arXiv:1906.10929 | doi:10.1038/s42254-018-0003-5 |
+| 5 | D. Rosset et al., Imperfect measurement settings: implications for quantum state tomography and entanglement witnesses, Phys. Rev. A 86, 062325 (2012); read as preprint arXiv:1203.0911 | doi:10.1103/PhysRevA.86.062325 |
+| 6 | D. Elkouss and S. Wehner, (Nearly) optimal P values for all Bell inequalities, npj Quantum Inf. 2, 16026 (2016); read as preprint arXiv:1510.07233 | doi:10.1038/npjqi.2016.26 |

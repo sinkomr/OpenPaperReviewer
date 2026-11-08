@@ -9,15 +9,7 @@ One file per reference in `04_references/`, named `ref_<number>.md`.
 
 ## 1. Record
 
-| Field | As cited in the paper | As found |
-|---|---|---|
-| Authors | | |
-| Title | | |
-| Venue, volume, pages | | |
-| Year | | |
-| Identifier | | |
-
-Record check: matches | mismatch (which fields) | not found
+Record check: matches | mismatch (each differing field, as cited and as found) | not found
 Notices on the source: none found | correction | expression of concern | retraction (with link)
 
 ## 2. Access

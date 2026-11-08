@@ -9,8 +9,6 @@ version: "0.1"
 
 # Photoluminescence and ultrafast spectroscopy
 
-Steady-state and time-resolved photoluminescence (PL), the photoluminescence quantum yield (PLQY) and pump-probe or transient absorption (TA) spectroscopy are used to claim lifetimes of carriers and excitons, rates of recombination, trapping and transfer, emission efficiencies, and the identity of excited states. Each of these is inferred from light emitted or absorbed after optical excitation, so the result depends on how strongly the sample was excited, how the time axis and instrument response were handled, and which model turned the data into rates and assignments.
-
 ## 1. Excitation density
 
 **Question.** Does the paper state the pump fluence or power density, spot size, repetition rate, photon energy and absorbed fraction, convert these into an initial density of excitations, and show whether the dynamics and spectra change with that density?
@@ -41,27 +39,17 @@ Steady-state and time-resolved photoluminescence (PL), the photoluminescence qua
 
 **Benchmark.** [1], [2], [3], [6]
 
-## 4. Fitting decays and reporting lifetimes
-
-**Question.** For each quoted lifetime, does the paper give the fitted function, the time window, the number of components and the reason for it, the residuals, and the definition of any average lifetime?
-
-**Why it matters.** Several sums of exponentials can fit the same noisy decay, so adding components can improve a fit without each component meaning a separate process. An average or effective lifetime depends on how the components are weighted and can hide competing pathways, and a single wavelength or a single time constant can omit processes visible elsewhere in the data.
-
-**Resolved by.** The model stated together with its physical basis; weighted residuals and goodness-of-fit statistics shown, with tests used to choose between models with different numbers of components; the fit window and background treatment stated; the individual components and amplitudes reported, not only an average; kinetics shown at several wavelengths alongside the full spectra; for decays that are not exponential, a time-dependent or differential decay time, or a physical rate model, instead of a single constant.
-
-**Benchmark.** [3], [5], [6]
-
-## 5. What a decay time measures
+## 4. What a decay time measures
 
 **Question.** When a decay time is presented as a recombination lifetime, a trapping time or a transfer rate, does the paper show that the decay is set by that process and not by carrier diffusion, surface or interface recombination, charge extraction into adjacent layers, or a carrier-density dependence of the recombination?
 
 **Why it matters.** A single-exponential lifetime has a simple meaning only when recombination is linear in the excess carrier density, as in a doped sample under low injection. In an intrinsic sample both carrier types are excited, so the decay time changes with density as the decay proceeds. In layer stacks and devices, extraction to transport layers, interface recombination and the charging of electrodes also change the PL decay, so a faster decay cannot simply be read as faster recombination.
 
-**Resolved by.** The injection regime identified and the decay time treated as a function of density or time where needed; controls that isolate each pathway, such as films with and without passivated surfaces or transport layers and different thicknesses; a rate or drift-diffusion model fitted to data at several fluences, with the fluence stated for every decay shown.
+**Resolved by.** The injection regime identified and the decay time treated as a function of density or time where needed; controls that isolate each pathway, such as films with and without passivated surfaces or transport layers and different thicknesses; a rate or drift-diffusion model fitted to data at several fluences, with the fluence stated for every decay shown; any average lifetime defined, with the components and amplitudes behind it; kinetics shown at several wavelengths.
 
-**Benchmark.** [1], [5]
+**Benchmark.** [1], [3], [5]
 
-## 6. Quantum yield
+## 5. Quantum yield
 
 **Question.** Is the PLQY measured by a stated method, absolute with an integrating sphere or relative to a named standard, with the excitation wavelength and intensity, the absorbance of the sample, and corrections for reabsorption and detector response given?
 
@@ -71,7 +59,7 @@ Steady-state and time-resolved photoluminescence (PL), the photoluminescence qua
 
 **Benchmark.** [7], [8], [9], [10]
 
-## 7. Assignment of transient features and kinetic models
+## 6. Assignment of transient features and kinetic models
 
 **Question.** How was each positive, negative or derivative-shaped feature in the transient spectra assigned, and, when species-associated spectra or microscopic rate constants are reported, what kinetic model was imposed and was it tested?
 
@@ -81,7 +69,7 @@ Steady-state and time-resolved photoluminescence (PL), the photoluminescence qua
 
 **Benchmark.** [1], [2], [3], [4]
 
-## 8. Emission spectra and assignment of emission peaks
+## 7. Emission spectra and assignment of emission peaks
 
 **Question.** Are the emission spectra corrected for the spectral response of the detection system, and is each emission peak assigned (free or bound exciton, charged exciton, defect, band-to-band) on evidence beyond its energy, such as its dependence on excitation power and temperature measured over a wide range?
 
@@ -93,16 +81,16 @@ Steady-state and time-resolved photoluminescence (PL), the photoluminescence qua
 
 ## Sources
 
-| # | Reference | Identifier | Access | Where it supports the item |
-|---|---|---|---|---|
-| 1 | K.-C. Chou, D. C. Zeitz, M. Khvichia and J. Z. Zhang, Tutorial: Transient absorption spectroscopy for probing ultrafast dynamics, ACS Phys. Chem. Au 6, 584–596 (2026); read in PubMed Central (PMC13397461) | doi:10.1021/acsphyschemau.6c00027 | full text | Sec. 2.4: group velocity dispersion chirps the probe so time zero varies with wavelength and must be corrected; the IRF is set by the pump-probe cross-correlation; near zero delay, cross-phase modulation and two-photon absorption from solvent or substrate contaminate the signal. Sec. 2.5: in the linear regime signal scales with pump power and decays do not depend on density, which is needed for intrinsic lifetimes; at high fluence Auger recombination and exciton-exciton annihilation add fluence-dependent fast components; a power series maps kinetic order, staying below the photodegradation threshold. Sec. 3.1: chirp correction using the coherent artefact in a blank. Secs. 3.4 to 3.6: sequential-model spectra may be combinations of species; target analysis rests on a postulated scheme and assumes constant spectral shapes; rate constants are then mapped onto mechanisms |
-| 2 | R. Berera, R. van Grondelle and J. T. M. Kennis, Ultrafast transient absorption spectroscopy: principles and application to photosynthetic systems, Photosynth. Res. 101, 105–118 (2009); read in PubMed Central (PMC2744833) | doi:10.1007/s11120-009-9454-y | full text | "The principle of ultrafast transient absorption spectroscopy" and Fig. 1: a difference spectrum sums ground-state bleach, stimulated emission and excited-state absorption; coherent artefact and cross-phase modulation at early times are excluded or modelled. "Equipment" section: the fraction excited depends on focus size, concentration and extinction coefficient; lower pulse energies used for annihilation-free conditions, while shorter pulse spacing lets long-lived triplet or charge-separated states build up. "The transient absorption setup": white-light chirp described by a polynomial in the analysis; IRF measured by frequency mixing or transient birefringence; samples flowed or shaken to avoid repeated exposure and degradation. "Collection of transient absorption spectra": spectra before time zero for the baseline; repeated runs to test reproducibility and sample stability. "Data analysis": sequential spectra are generally mixtures; pure-species spectra need a specific kinetic model |
-| 3 | A. J. King, L. Chen, A. B. Maurer and J. Huang, A guide to transient absorption spectroscopy for porous crystalline materials in photocatalysis, Nat. Commun. 17, 5280 (2026); read in PubMed Central (PMC13269924) | doi:10.1038/s41467-026-73511-4 | full text | "Common limitations": artefacts from uncorrected dispersion, solvent, cross-phase modulation and thin-film interference; measuring solvent or substrate alone; omitting pre-time-zero data hides baseline stability and the origin of fast features; single-wavelength kinetics, unjustified multi-exponential fits and average lifetimes can mask processes; singular value decomposition and global analysis. "Practical considerations": solid samples are more susceptible to laser damage and thermal accumulation, requiring control of fluence and repetition rate; positive features may arise from refractive-index changes. "Working principles": steady-state absorption and emission spectra to identify bleach and stimulated emission, and spectroelectrochemistry for oxidised or reduced species. Table 1: compare kinetics with the cross-correlation width; check derivative-like features by spectral shape and fluence dependence |
-| 4 | M. B. Price, J. Butkus, T. C. Jellicoe, A. Sadhanala, A. Briane, J. E. Halpert, K. Broch, J. M. Hodgkiss, R. H. Friend and F. Deschler, Hot-carrier cooling and photoinduced refractive index changes in organic–inorganic lead halide perovskites, Nat. Commun. 6, 8420 (2015) | doi:10.1038/ncomms9420 | full text | Abstract and Results: initial carrier density derived from optical density, film thickness and pump fluence; at higher excitation densities a phonon bottleneck slows carrier cooling; a sub-band-gap derivative feature explained by band-gap renormalisation and hot carriers; photoinduced reflectivity changes distort transient absorption spectra and must be included to extract physical constants; simultaneous transmission and reflection measurements |
-| 5 | L. Krückemeier, B. Krogmeier, Z. Liu, U. Rau and T. Kirchartz, Understanding transient photoluminescence in halide perovskite layer stacks and solar cells, Adv. Energy Mater. 11, 2003489 (2021); read as preprint arXiv:2102.08730 | doi:10.1002/aenm.202003489 | full text | Introduction: reducing a decay to the time constant of a single exponential makes misinterpretation likely, and with contact layers a faster decay cannot simply mean faster recombination. Sec. 2: differential decay time from the derivative of the PL. Sec. 2.1: a lifetime is well defined for a doped sample in low-level injection; in intrinsic films in high-level injection the decay time depends on carrier density, and simulated decays show radiative and Auger recombination at high density. Sec. 2.2: surface recombination. Secs. 3 to 5: charge extraction, interface charging and electrode charging alter the PL decay, which depends strongly on pulse fluence in devices. Sec. 6: measured decays on films, layer stacks and devices; without the laser fluence such data are hard to compare |
-| 6 | N. Boens, W. Qin, N. Basarić, J. Hofkens, M. Ameloot, J. Pouget, J.-P. Lefèvre, B. Valeur, E. Gratton, M. vandeVen et al., Fluorescence lifetime standards for time and frequency domain fluorescence spectroscopy, Anal. Chem. 79, 2137–2149 (2007); read as the author manuscript in PubMed Central (PMC6816264) | doi:10.1021/ac062160k | full text | Opening (unlabelled) section: lifetime standards test instruments for systematic errors and correct the wavelength-dependent time response of detectors. "Theory": the observed decay is the true decay convolved with the IRF, usually measured with scattered excitation light; reference convolution with a single-exponential standard corrects the colour effect. "Single-curve fitting": weighted residuals, reduced chi-square, autocorrelation, Durbin-Watson and runs tests to judge fit quality and to choose between one and two exponentials |
-| 7 | A. M. Brouwer, Standards for photoluminescence quantum yield measurements in solution (IUPAC Technical Report), Pure Appl. Chem. 83, 2213–2228 (2011); read as the published version in the University of Amsterdam repository | doi:10.1351/PAC-REP-10-09-31 | full text | Sec. 1: the relative quantum yield equation with absorption factors and refractive indices; different excitation wavelengths for sample and standard are not advisable. Sec. 2: absorbance typically below 0.1 to avoid inner-filter effects, same cell and absorbance for sample and standard, correction for the spectral response of the detection system and a check of detector linearity, similar emission range. Sec. 4: only three standards well established, to within about 4%. Sec. 5: in a survey of about 250 papers, standards used at unverified excitation wavelengths, mismatched ranges, and standards not named |
-| 8 | C. Würth, M. Grabolle, J. Pauli, M. Spieles and U. Resch-Genger, Relative and absolute determination of fluorescence quantum yields of transparent samples, Nat. Protoc. 8, 1535–1550 (2013) | doi:10.1038/nprot.2013.087 | abstract | Abstract: protocols for relative quantum yields with a conventional spectrometer and absolute quantum yields with a calibrated integrating sphere, addressing typical sources of uncertainty; achievable uncertainties of 5 to 10% |
-| 9 | J. C. de Mello, H. F. Wittmann and R. H. Friend, An improved experimental determination of external photoluminescence quantum efficiency, Adv. Mater. 9, 230–232 (1997) | doi:10.1002/adma.19970090308 | abstract | Abstract: an integrating-sphere method for the external quantum yield of thin-film samples, with spectrally resolved detection that separates excitation and emission, suited to small Stokes shifts, low yields and scattering samples |
-| 10 | T.-S. Ahn, R. O. Al-Kaysi, A. M. Müller, K. M. Wentz and C. J. Bardeen, Self-absorption correction for solid-state photoluminescence quantum yields obtained from integrating sphere measurements, Rev. Sci. Instrum. 78, 086105 (2007) | doi:10.1063/1.2768926 | abstract | Abstract: self-absorption affects integrating-sphere quantum yield measurements; a correction that uses the observed yield and the luminescence spectrum and accounts for absorption and re-emission; earlier methods overestimate the true yield, especially at high absorbance or high yield |
-| 11 | T. Schmidt, K. Lischka and W. Zulehner, Excitation-power dependence of the near-band-edge photoluminescence of semiconductors, Phys. Rev. B 45, 8989–8994 (1992) | doi:10.1103/PhysRevB.45.8989 | abstract | Abstract: excitonic emission scales with excitation power to an exponent between 1 and 2; the power law fails when power varies over more than two orders of magnitude; the exponent changes with excitation wavelength; a model relating the exponents of free-exciton, bound-exciton and free-to-bound emission |
+| # | Reference | Identifier |
+|---|---|---|
+| 1 | K.-C. Chou et al., Tutorial: Transient absorption spectroscopy for probing ultrafast dynamics, ACS Phys. Chem. Au 6, 584 (2026); read in PubMed Central (PMC13397461) | doi:10.1021/acsphyschemau.6c00027 |
+| 2 | R. Berera et al., Ultrafast transient absorption spectroscopy: principles and application to photosynthetic systems, Photosynth. Res. 101, 105 (2009); read in PubMed Central (PMC2744833) | doi:10.1007/s11120-009-9454-y |
+| 3 | A. J. King et al., A guide to transient absorption spectroscopy for porous crystalline materials in photocatalysis, Nat. Commun. 17, 5280 (2026); read in PubMed Central (PMC13269924) | doi:10.1038/s41467-026-73511-4 |
+| 4 | M. B. Price et al., Hot-carrier cooling and photoinduced refractive index changes in organic–inorganic lead halide perovskites, Nat. Commun. 6, 8420 (2015) | doi:10.1038/ncomms9420 |
+| 5 | L. Krückemeier et al., Understanding transient photoluminescence in halide perovskite layer stacks and solar cells, Adv. Energy Mater. 11, 2003489 (2021); read as preprint arXiv:2102.08730 | doi:10.1002/aenm.202003489 |
+| 6 | N. Boens et al., Fluorescence lifetime standards for time and frequency domain fluorescence spectroscopy, Anal. Chem. 79, 2137 (2007); read as the author manuscript in PubMed Central (PMC6816264) | doi:10.1021/ac062160k |
+| 7 | A. M. Brouwer, Standards for photoluminescence quantum yield measurements in solution (IUPAC Technical Report), Pure Appl. Chem. 83, 2213 (2011); read as the published version in the University of Amsterdam repository | doi:10.1351/PAC-REP-10-09-31 |
+| 8 | C. Würth et al., Relative and absolute determination of fluorescence quantum yields of transparent samples, Nat. Protoc. 8, 1535 (2013) | doi:10.1038/nprot.2013.087 |
+| 9 | J. C. de Mello et al., An improved experimental determination of external photoluminescence quantum efficiency, Adv. Mater. 9, 230 (1997) | doi:10.1002/adma.19970090308 |
+| 10 | T.-S. Ahn et al., Self-absorption correction for solid-state photoluminescence quantum yields obtained from integrating sphere measurements, Rev. Sci. Instrum. 78, 086105 (2007) | doi:10.1063/1.2768926 |
+| 11 | T. Schmidt et al., Excitation-power dependence of the near-band-edge photoluminescence of semiconductors, Phys. Rev. B 45, 8989 (1992) | doi:10.1103/PhysRevB.45.8989 |
